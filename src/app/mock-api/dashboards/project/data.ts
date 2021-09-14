@@ -24,11 +24,11 @@ export const project = {
         labels  : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
         series  : {
             'this-week': [
-                {
-                    name: 'New issues',
-                    type: 'line',
-                    data: [42, 28, 43, 34, 20, 25, 22]
-                },
+                // {
+                //     name: 'New issues',
+                //     type: 'line',
+                //     data: [42, 28, 43, 34, 20, 25, 22]
+                // },
                 {
                     name: 'Closed issues',
                     type: 'column',
@@ -36,11 +36,11 @@ export const project = {
                 }
             ],
             'last-week': [
-                {
-                    name: 'New issues',
-                    type: 'line',
-                    data: [37, 32, 39, 27, 18, 24, 20]
-                },
+                // {
+                //     name: 'New issues',
+                //     type: 'line',
+                //     data: [37, 32, 39, 27, 18, 24, 20]
+                // },
                 {
                     name: 'Closed issues',
                     type: 'column',
