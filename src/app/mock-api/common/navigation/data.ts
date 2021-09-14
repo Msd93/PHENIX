@@ -161,6 +161,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 type : 'basic',
                 icon : 'heroicons_outline:check-circle',
                 link : '/apps/tasks'
+            },
+            {
+                id   : 'apps.medias',
+                title: 'Media',
+                type : 'basic',
+                icon : 'heroicons_outline:check-circle',
+                link : '/apps/medias'
             }
         ]
     },
