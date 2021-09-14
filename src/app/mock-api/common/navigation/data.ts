@@ -57,8 +57,15 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id   : 'apps.panier',
                 title: 'Panier',
                 type : 'basic',
-                icon : 'heroicons_outline:academic-cap',
+                icon : 'heroicons_outline:user-group',
                 link : '/apps/panier'
+            },
+            {
+                id   : 'pages.home-phenix',
+                title: 'Home Phenix',
+                type : 'basic',
+                icon : 'heroicons_outline:academic-cap',
+                link : '/pages/home-phenix'
             },
             {
                 id      : 'apps.calendar',
