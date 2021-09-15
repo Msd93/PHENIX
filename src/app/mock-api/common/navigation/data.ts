@@ -10,13 +10,6 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon    : 'heroicons_outline:home',
         children: [
             {
-                id   : 'dashboards.project',
-                title: 'Project',
-                type : 'basic',
-                icon : 'heroicons_outline:clipboard-check',
-                link : '/dashboards/project'
-            },
-            {
                 id   : 'dashboards.analytics',
                 title: 'Analytics',
                 type : 'basic',
@@ -30,13 +23,6 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 icon : 'heroicons_outline:cash',
                 link : '/dashboards/finance'
             },
-            {
-                id   : 'dashboards.crypto',
-                title: 'Crypto',
-                type : 'basic',
-                icon : 'heroicons_outline:currency-dollar',
-                link : '/dashboards/crypto'
-            }
         ]
     },
 
