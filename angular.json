@@ -139,6 +139,7 @@
     },
     "defaultProject": "fuse",
     "cli": {
+      "analytics": "3a0dede4-2d82-4519-ba78-c28e7d4e9d96",
         "defaultCollection": "@angular-eslint/schematics"
     }
 }
