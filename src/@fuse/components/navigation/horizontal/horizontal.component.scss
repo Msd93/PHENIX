@@ -4,6 +4,11 @@ fuse-horizontal-navigation {
     .fuse-horizontal-navigation-wrapper {
         display: flex;
         align-items: center;
+        top: 0;
+        z-index: 1000;
+        position: sticky;
+        position: -webkit-sticky;
+        /* macOS/iOS Safari */
 
         /* Basic, Branch */
         fuse-horizontal-navigation-basic-item,

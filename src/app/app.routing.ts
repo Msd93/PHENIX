@@ -81,8 +81,20 @@ export const appRoutes: Route[] = [
                 {path: 'finance', loadChildren: () => import('app/modules/admin/dashboards/finance/finance.module').then(m => m.FinanceModule)},
             ]},
 
+            // Media
+            {path: 'media', children: [
 
+                // Photo
+                {path: 'photo', loadChildren: () => import('app/modules/media/photo/photo.module').then(m => m.PhotoModule)},
+                {path: 'video', loadChildren: () => import('app/modules/media/video/video.module').then(m => m.VideoModule)},
+                {path: 'photo', loadChildren: () => import('app/modules/media/texture/texture.module').then(m => m.TextureModule)},
+            ]},
+            // Box
+            {path: 'box', children: [
 
+                // Photo
+                {path: 'panier', loadChildren: () => import('app/modules/box/panier/panier.module').then(m => m.PanierModule)},
+            ]},
             // Pages
             {path: 'pages', children: [
 
