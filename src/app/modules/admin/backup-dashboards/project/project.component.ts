@@ -1,17 +1,10 @@
-import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { ApexAxisChartSeries, ApexChart, ApexOptions, ApexTitleSubtitle, ApexXAxis, ChartComponent } from 'ng-apexcharts';
+import { ApexOptions } from 'ng-apexcharts';
 import { ProjectService } from 'app/modules/admin/dashboards/project/project.service';
 
-export type ChartOptions = {
-    series: ApexAxisChartSeries;
-    chart: ApexChart;
-    xaxis: ApexXAxis;
-    title: ApexTitleSubtitle;
-  };
-  
 @Component({
     selector       : 'project',
     templateUrl    : './project.component.html',
@@ -29,20 +22,15 @@ export class ProjectComponent implements OnInit, OnDestroy
     data: any;
     selectedProject: string = 'ACME Corp. Backend App';
     private _unsubscribeAll: Subject<any> = new Subject<any>();
-    @ViewChild("chart") chart: ChartComponent;
-    public chartOptions: Partial<ChartOptions>;
-    @ViewChild("pie") pie: ChartComponent;
-    public chartOptions1: Partial<ChartOptions>;
+
     /**
      * Constructor
      */
     constructor(
         private _projectService: ProjectService,
         private _router: Router
-
     )
     {
-
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -54,27 +42,6 @@ export class ProjectComponent implements OnInit, OnDestroy
      */
     ngOnInit(): void
     {
-    
-        this.chartOptions = {
-            series: [
-              {
-                name: "My-series",
-                data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-              }
-            ],
-            chart: {
-              height: 350,
-              type: "bar"
-            },
-            title: {
-              text: "My First Angular Chart"
-            },
-            xaxis: {
-              categories: ["Jan", "Feb",  "Mar",  "Apr",  "May",  "Jun",  "Jul",  "Aug", "Sep"]
-            }
-          };
-        
-
         // Get the data
         this._projectService.data$
             .pipe(takeUntil(this._unsubscribeAll))
