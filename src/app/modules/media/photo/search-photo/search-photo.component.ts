@@ -33,7 +33,7 @@ export class SearchPhotoComponent implements OnInit {
                               .hidePresets()
                               .hideAlphaChannel();
 
-  public sketchControl = new ColorPickerControl().setValueFrom('#A6771C').hidePresets();
+  public sketchControl = new ColorPickerControl().setValueFrom('#479698').hidePresets();
 
   selectedHex;
   constructor() { }
