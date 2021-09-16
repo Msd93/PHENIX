@@ -2,37 +2,43 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PhotoRoutingModule } from './photo-routing.module';
-import { SearchPhotoComponent } from './search-photo/search-photo.component';
-import { ColorPickerModule } from '@iplab/ngx-color-picker';
-import { MatMomentDateModule } from '@angular/material-moment-adapter';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { DetailsPictureComponent } from './details-picture/details-picture.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatSelectModule } from '@angular/material/select';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatTableModule } from '@angular/material/table';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { FuseCardModule } from '@fuse/components/card';
+import { SharedModule } from 'app/shared/shared.module';
+import { SearchPhotoComponent } from './search-photo/search-photo.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
 import { FuseScrollbarModule } from '@fuse/directives/scrollbar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ColorPickerModule } from '@iplab/ngx-color-picker';
 
 
 @NgModule({
   declarations: [
-    SearchPhotoComponent
+    SearchPhotoComponent,
+    DetailsPictureComponent
   ],
   imports: [
     CommonModule,
     PhotoRoutingModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatButtonToggleModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
@@ -51,6 +57,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
     
     ColorPickerModule, // module color picker
+    MatProgressBarModule,
+    FuseCardModule,
+    SharedModule,
   ]
 })
 export class PhotoModule { }
