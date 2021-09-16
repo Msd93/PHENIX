@@ -68,6 +68,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 link : '/pages/home-phenix'
             },
             {
+                id   : 'pages.home-phenix',
+                title: 'Contact Phenix',
+                type : 'basic',
+                icon : 'heroicons_outline:academic-cap',
+                link : '/pages/home-phenix/contact-phenix'
+            },
+            {
                 id      : 'apps.calendar',
                 title   : 'Calendar',
                 subtitle: '3 upcoming events',

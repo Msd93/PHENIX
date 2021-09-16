@@ -3,6 +3,8 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { HelpCenterService } from 'app/modules/admin/apps/help-center/help-center.service';
 import { FaqCategory } from 'app/modules/admin/apps/help-center/help-center.type';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-home-phenix',
@@ -18,7 +20,8 @@ export class HomePhenixComponent implements OnInit, OnDestroy {
   /**
    * Constructor
    */
-  constructor(private _helpCenterService: HelpCenterService)
+  constructor(private _helpCenterService: HelpCenterService,
+    private _matDialog: MatDialog)
   {
     this.components = [
         {
@@ -195,7 +198,6 @@ export class HomePhenixComponent implements OnInit, OnDestroy {
     ];
 }
   
-
   // -----------------------------------------------------------------------------------------------------
   // @ Lifecycle hooks
   // -----------------------------------------------------------------------------------------------------
@@ -213,6 +215,18 @@ export class HomePhenixComponent implements OnInit, OnDestroy {
           });
   }
 
+  /**
+     * Add a new note
+     */
+   addNewNote(): void
+   {
+       this._matDialog.open(LoginComponent, {
+           autoFocus: false,
+           data     : {
+               note: {}
+           }
+       });
+   }
   /**
    * On destroy
    */

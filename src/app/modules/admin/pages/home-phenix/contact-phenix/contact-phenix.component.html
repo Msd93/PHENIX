@@ -1,0 +1,66 @@
+<div class="flex flex-col flex-auto min-w-0">
+
+    <!-- Header -->
+    <div class="relative pt-8 pb-28 px-4 sm:pt-20 sm:pb-48 sm:px-16 overflow-hidden"style="background-image: url('https://cdn.pixabay.com/photo/2015/11/07/11/10/road-1030888_1280.jpg')">
+        <!-- @formatter:on -->
+        <div class="z-10 relative flex flex-col items-center">
+         
+            <!-- <div class="mt-6 sm:text-4xl text-center tracking-tight text-secondary transition-colors">
+                Contact us.
+            </div> -->
+            <div class="mt-1 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center">
+                Contact us.
+            </div>
+        </div>
+    </div>
+
+       <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-4 sm:py-4 sm:px-4 px-4 md:px-2 border-b bg-card dark:bg-transparent">
+                <form class="flex flex-col mt-8 p-8 pb-4 bg-card w-full">
+                    <!-- <div class="flex flex-col gt-xs:flex-row"> -->
+                        <div class="flex my-6 xs:flex-col">
+                        <mat-form-field
+                            [ngClass]="formFieldHelpers"
+                            class="flex-auto">
+                            <mat-label>First name</mat-label>
+                            <input matInput>
+                            <mat-icon
+                                class="icon-size-5"
+                                matSuffix
+                                [svgIcon]="'heroicons_solid:user-circle'"></mat-icon>
+                        </mat-form-field>
+                        <mat-form-field
+                            [ngClass]="formFieldHelpers"
+                            class="min-w-200 ml-8 xs:ml-0">
+                            <mat-label>Last name</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="flex flex-col gt-xs:flex-row space-x-1"> 
+                    <!-- <div class="flex"> -->
+                        <mat-form-field
+                        [ngClass]="formFieldHelpers"
+                        class="flex-auto gt-md:pr-3">
+                        <mat-label>Email</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                        <mat-form-field
+                            [ngClass]="formFieldHelpers"
+                            class="fuse-mat-textarea flex-auto">
+                            <mat-label>Address</mat-label>
+                            <textarea
+                                matInput
+                                [rows]="6"
+                                matTextareaAutosize></textarea>
+                        </mat-form-field>
+                    </div>
+                    <button
+                    class="ml-2 font-bold"
+                        mat-flat-button [matTooltip]="'valider'"
+                        [color]="'primary'">
+                        Envoyer
+                    </button>
+                </form>
+                
+    <!-- </div> -->
+</div>
+</div>

@@ -15,10 +15,24 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { FuseAlertModule } from '@fuse/components/alert';
 import { SharedModule } from 'app/shared/shared.module';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { SignInModule } from '../authentication/sign-in/sign-in.module';
+import { SignUpModule } from '../authentication/sign-up/sign-up.module';
+import { SignOutModule } from '../authentication/sign-out/sign-out.module';
+import { ForgotPasswordModule } from '../authentication/forgot-password/forgot-password.module';
+import { ResetPasswordModule } from '../authentication/reset-password/reset-password.module';
+import { UnlockSessionModule } from '../authentication/unlock-session/unlock-session.module';
+import { ConfirmationRequiredModule } from '../authentication/confirmation-required/confirmation-required.module';
+import { MaterialLayoutModule } from 'app/layout/layouts/horizontal/material/material.module';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { LoginComponent } from './login/login.component';
+import { ContactPhenixComponent } from './contact-phenix/contact-phenix.component';
 
 @NgModule({
   declarations: [
-    HomePhenixComponent
+    HomePhenixComponent,
+    LoginComponent,
+    ContactPhenixComponent
   ],
   imports: [
     CommonModule,
@@ -35,6 +49,22 @@ import { MatExpansionModule } from '@angular/material/expansion';
     SharedModule,
     MatButtonModule,
     MatExpansionModule,
+    MaterialLayoutModule,
+    SignInModule,
+    SignUpModule,
+    SignOutModule,
+    ForgotPasswordModule,
+    ResetPasswordModule,
+    UnlockSessionModule,
+    ConfirmationRequiredModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    FuseAlertModule,
+    SharedModule
   ]
   
 })
