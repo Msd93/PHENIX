@@ -14,12 +14,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FuseCardModule } from '@fuse/components/card';
+import { NgxFileDropModule } from 'ngx-file-drop';
 import { SharedModule } from 'app/shared/shared.module';
+import { UploadPictureComponent } from './upload-picture/upload-picture.component';
 
 
 @NgModule({
   declarations: [
-    DetailsPictureComponent
+    DetailsPictureComponent,
+    UploadPictureComponent
   ],
   imports: [
     CommonModule,
@@ -36,6 +39,10 @@ import { SharedModule } from 'app/shared/shared.module';
     MatProgressBarModule,
     MatTooltipModule,
     FuseCardModule,
+
+
+    NgxFileDropModule,
+    
     SharedModule,
   ]
 })

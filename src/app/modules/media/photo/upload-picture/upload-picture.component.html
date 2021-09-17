@@ -1,0 +1,24 @@
+<div class="container mx-auto">
+    <div class="grid grid-flow-row grid-cols-1 grid-rows-2 gap-4">
+        <div class="flex">
+            <ngx-file-drop 
+            dropZoneClassName="border border-blue-400"
+            (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" 
+            contentClassName="space-x-3 p-5">
+                <ng-template  ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                Faire un glisser déposer pour ajouter vos fichiers ou  
+                <button type="button" class="bg-gray-200 p-2 rounded" (click)="openFileSelector()">Selection multiple</button>
+                </ng-template>
+            </ngx-file-drop>
+        </div>
+
+        <div class="flex space-x-2 overflow-x-auto">
+            <div class="flex" *ngFor="let item of files; let i=index">
+                <div *ngIf="item.fileEntry.isFile">
+                    <strong>{{ item.relativePath }}</strong>
+                <img  [src]="readFile(item)" alt="{{item.relativePath}}" />
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
