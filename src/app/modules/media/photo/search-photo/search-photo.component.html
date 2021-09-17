@@ -13,14 +13,14 @@
 
     <div class="grid h-full sm:grid-cols-1 md:grid-cols-12 gap-2 w-full min-w-0 md:overflow-auto">
 
-        <div class="flex flex-col flex-auto space-y-10 p-4 md:col-span-3 divide-y-2 bg-card" fuseScrollbar [fuseScrollbarOptions]="{wheelPropagation: true, suppressScrollY: false}">
+        <div class="flex flex-col flex-auto space-y-6 p-4 md:col-span-3 divide-y-2 bg-card" fuseScrollbar [fuseScrollbarOptions]="{wheelPropagation: true, suppressScrollY: false}">
             <!-- Trier Par -->
             <div class="flex flex-col px-6">
-                <span class="pl-1 text-xl font-semibold inline-flex">
+                <span class="pl-1 text-lg font-semibold inline-flex">
                     <mat-icon  [svgIcon]="'mat_outline:unfold_more'"></mat-icon>
                     Trier par
                 </span>
-                <mat-form-field class="flex-auto fuse-mat-no-subscript fuse-mat-rounded pb-3 text-xl gt-xs:pr-3">
+                <mat-form-field class="flex-auto fuse-mat-no-subscript fuse-mat-rounded pb-3 text-lg gt-xs:pr-3">
                     <mat-select [placeholder]="'Trier par'">
                         <mat-option value="select1-1">Meilleurs résultat</mat-option>
                         <mat-option value="select1-2">Images</mat-option>
@@ -33,7 +33,7 @@
                 <div class="flex flex-0 justify-between">
                     <div class="flex items-center">
                         <mat-icon class="icon-size-6" [svgIcon]="'mat_outline:format_paint'"></mat-icon>
-                        <div class="font-bold text-xl pl-3 pt-2">Couleur dominante</div>
+                        <div class="font-bold text-lg pl-3 pt-2">Couleur dominante</div>
                     </div>
                     <div>
                         <mat-slide-toggle class="pt-2 pl-4" [color]="'primary'"></mat-slide-toggle>
@@ -48,11 +48,11 @@
             </div>
             <!-- Orientation -->
             <div class="flex flex-col pt-6 px-6">
-                <span class="pl-1 text-xl font-bold inline-flex">
+                <span class="pl-1 text-lg font-bold inline-flex">
                     <mat-icon class="icon-size-6" [svgIcon]="'mat_outline:open_with'"></mat-icon>
                     <span class="pl-2">Orientation</span>
                 </span>
-                <mat-form-field class="flex-auto fuse-mat-no-subscript fuse-mat-rounded pb-3 text-xl">
+                <mat-form-field class="flex-auto fuse-mat-no-subscript fuse-mat-rounded pb-3 text-lg">
                     <mat-select [placeholder]="'Trier par'">
                         <mat-option value="select1-1">Tous</mat-option>
                         <mat-option value="select1-2">OPTION 2</mat-option>
@@ -64,7 +64,7 @@
             <div class="flex flex-0 flex-row pt-4 justify-between px-6">
                 <div class="flex items-center">
                     <mat-icon class="icon-size-8" [svgIcon]="'mat_solid:groups'"></mat-icon>
-                    <div class="font-bold text-xl pl-3">Personne</div>
+                    <div class="font-bold text-lg pl-3">Personne</div>
                 </div>
                 <div>
                     <mat-slide-toggle class="pt-2 pl-4" [color]="'primary'"></mat-slide-toggle>
@@ -72,9 +72,9 @@
             </div>
             <!-- Contenu centré -->
             <div class="flex flex-0 flex-row pt-4 justify-between px-6">
-                <div class="flex items-center">
+                <div class="flex items-center inline-flex">
                     <mat-icon class="icon-size-6" [svgIcon]="'my_location'"></mat-icon>
-                    <div class="font-bold text-xl pl-3 pt-2">Contenu centré</div>
+                    <div class="font-bold text-lg pl-3">Contenu centré</div>
                 </div>
                 <div>
                     <mat-slide-toggle class="pt-2 pl-4" [color]="'primary'"></mat-slide-toggle>
