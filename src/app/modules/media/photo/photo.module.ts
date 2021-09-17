@@ -16,28 +16,58 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FuseCardModule } from '@fuse/components/card';
 import { NgxFileDropModule } from 'ngx-file-drop';
 import { SharedModule } from 'app/shared/shared.module';
+<<<<<<< HEAD
 import { UploadPictureComponent } from './upload-picture/upload-picture.component';
+=======
+import { SearchPhotoComponent } from './search-photo/search-photo.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
+import { FuseScrollbarModule } from '@fuse/directives/scrollbar';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ColorPickerModule } from '@iplab/ngx-color-picker';
+>>>>>>> 34e5cae73cecca0624b7e44df045a2484f4a2d8a
 
 
 @NgModule({
   declarations: [
+<<<<<<< HEAD
     DetailsPictureComponent,
     UploadPictureComponent
+=======
+    SearchPhotoComponent,
+    DetailsPictureComponent
+>>>>>>> 34e5cae73cecca0624b7e44df045a2484f4a2d8a
   ],
   imports: [
     CommonModule,
     PhotoRoutingModule,
-
     MatButtonModule,
-    MatButtonToggleModule,
     MatCheckboxModule,
-    MatDividerModule,
+    MatButtonToggleModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
     MatMenuModule,
-    MatProgressBarModule,
+    MatSidenavModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
+    MatTableModule,
     MatTooltipModule,
+    MatSelectModule,
+    FuseScrollbarModule,
+    MatDividerModule,
+    MatAutocompleteModule,
+    MatSlideToggleModule,
+
+    
+    ColorPickerModule, // module color picker
+    MatProgressBarModule,
     FuseCardModule,
 
 

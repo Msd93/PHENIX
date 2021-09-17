@@ -1,4 +1,3 @@
-import { AcademyMockApi } from 'app/mock-api/apps/academy/api';
 import { ActivitiesMockApi } from 'app/mock-api/pages/activities/api';
 import { AnalyticsMockApi } from 'app/mock-api/dashboards/analytics/api';
 import { AuthMockApi } from 'app/mock-api/common/auth/api';
@@ -21,9 +20,9 @@ import { ScrumboardMockApi } from 'app/mock-api/apps/scrumboard/api';
 import { ShortcutsMockApi } from 'app/mock-api/common/shortcuts/api';
 import { TasksMockApi } from 'app/mock-api/apps/tasks/api';
 import { UserMockApi } from 'app/mock-api/common/user/api';
+import { OrderMockApi } from 'app/mock-api/client/order/api';
 
 export const mockApiServices = [
-    AcademyMockApi,
     ActivitiesMockApi,
     AnalyticsMockApi,
     AuthMockApi,
@@ -45,5 +44,6 @@ export const mockApiServices = [
     ScrumboardMockApi,
     ShortcutsMockApi,
     TasksMockApi,
-    UserMockApi
+    UserMockApi,
+    OrderMockApi
 ];

@@ -1,0 +1,152 @@
+<div
+    class="absolute inset-0 flex flex-col min-w-0 overflow-y-auto"
+    cdkScrollable>
+
+    <!-- Header -->
+    <div class="relative h-80 flex-0 py-8 px-4 sm:p-16 overflow-hidden bg-gray-800 dark text-center bg-no-repeat" style="background-image: url(assets/images/commande.jpeg);">
+        <!-- Background - @formatter:off -->
+        <!-- Rings -->
+        <div class="mt-1 text-4xl sm:text-7xl text-black-400 font-extrabold tracking-tight leading-tight text-center">
+            <span class="text-black">Votre commande</span>
+        </div>
+        <!-- <img class="flex w-full h-full" src="assets/images/commande.jpeg" alt="Logo image"> -->
+    </div>
+
+
+        <!-- Main -->
+
+            <!-- Invoice -->
+            <div class="w-full min-w-240 p-8 rounded-2xl shadow bg-card print:w-auto print:p-0 print:rounded-none print:shadow-none print:bg-transparent">
+    
+                <div class="grid grid-cols-12 gap-x-1 mt-6">
+                    <!-- Columns -->
+                    <div class="col-span-1 font-medium text-md text-secondary">Products</div>
+                    <div class="col-span-7 font-medium text-md text-secondary"></div>
+
+                    <div class="font-medium text-md text-right text-secondary">Type</div>
+                    <div class="font-medium text-md text-right text-secondary">Price</div>
+                    <div class="col-span-2 font-medium text-md text-right text-secondary"></div>
+    
+                    <!-- Divider -->
+                    <div class="col-span-12 my-4 border-b"></div>
+    
+                    <!-- Item -->
+                    <div class="col-span-1"><img class="w-full h-full" src="assets/images/cards/01-320x200.jpg" alt="Logo image"></div>
+                    <div class="col-span-7">
+                        <div class="ml-4 text-lg font-medium">
+                            <span>Prototype & Design</span>
+                        </div>
+
+                        <div class="ml-4 mt-2 text-md text-secondary">
+                            Prototyping of the application's general workflow and the detailed design of its 72 screens as a working prototype. Prototyping of the application's general workflow and the detailed design of its 72 screens as a working prototype.
+                        </div>
+                    </div>
+                    <div class="self-center text-right">Texture</div>
+                    <div class="self-center text-right">755 EUR</div>
+                    <div class="col-span-2 self-center text-center"><mat-icon class="text-red-400" svgIcon="heroicons_outline:trash"></mat-icon></div>
+    
+                    <!-- Divider -->
+                    <div class="col-span-12 my-4 border-b"></div>
+    
+                    <!-- Item -->
+                    <div class="col-span-1"><img class="w-full h-full" src="assets/images/cards/16-640x480.jpg" alt="Logo image"></div>
+                    <div class="col-span-7">
+                        <div class="ml-4 text-lg font-medium">
+                            <span>Development</span>
+                        </div>
+
+                        <div class="ml-4 mt-2 text-md text-secondary">
+                            The web and mobile development of the application using appropriate tools and registering it to major application stores.
+                        </div>
+                    </div>
+                    <div class="self-center text-right">Video</div>
+                    <div class="self-center text-right">620 EUR</div>
+                    <div class="col-span-2 self-center text-center"><mat-icon class="text-red-400" svgIcon="heroicons_outline:trash"></mat-icon></div>
+    
+                    <!-- Divider -->
+                    <div class="col-span-12 my-4 border-b"></div>
+
+                                        <!-- Item -->
+                                        <div class="col-span-1"><img class="w-full h-full" src="assets/images/cards/22-640x480.jpg" alt="Logo image"></div>
+                                        <div class="col-span-7">
+                                            <div class="ml-4 text-lg font-medium">
+                                                <span>Documentation & Training</span>
+                                            </div>
+                    
+                                            <div class="ml-4 mt-2 text-md text-secondary">
+                                                Development of the detailed documentation, preparing guides and instructional videos and extensive training of 2 people.
+                                            </div>
+                                        </div>
+                                        <div class="self-center text-right">Photo</div>
+                                        <div class="self-center text-right">886 EUR</div>
+                                        <div class="col-span-2 self-center text-center"><mat-icon class="text-red-400" svgIcon="heroicons_outline:trash"></mat-icon></div>
+                        
+                                        <!-- Divider -->
+                                        <div class="col-span-12 my-4 border-b"></div>
+    
+                    <!-- Item -->
+                    <div class="col-span-1"></div>
+                    <div class="col-span-7">
+                    </div>
+                    <div class="self-center text-right text-1xl">Total</div>
+                    <div class="self-center text-right text-1xl">2761 EUR</div>
+                    <div class="col-span-2 self-center text-center"></div>
+    
+                    <!-- Divider -->
+                    <!-- <div class="col-span-12 my-4 border-b"></div> -->
+                    <!-- Spacer -->
+                    <div class="col-span-12 mt-12"></div>
+    
+                </div>
+    
+                <div class="grid grid-cols-12 gap-x-1 mt-6">
+                    <div class="col-span-4 h-80">
+                        <img src="assets/images/visa.png" class="w-full rounded" alt="">
+                    </div>
+                    <div class="col-span-3 h-80">
+                        <mat-form-field class="fuse-mat-dense flex-auto w-full sm:text-sm md:text-base">
+                            <input matInput formControlName="'numero_carte'" [placeholder]="'4235 8173 5336 1102'">
+                        </mat-form-field>
+                        <mat-form-field class="fuse-mat-dense flex-auto w-full sm:text-sm md:text-base">
+                            <input matInput formControlName="'nom_client" [placeholder]="'André Michel'">
+                        </mat-form-field>
+                        <div class="col-span-2">
+                            <mat-form-field class="fuse-mat-dense col-span-2 flex-auto m:text-sm md:text-base">
+                                <input matInput formControlName="'expiration'" [placeholder]="'16/21'">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-span-1">
+                            <mat-form-field class="fuse-mat-dense col-span-1 flex-auto m:text-sm md:text-base">
+                                <input matInput formControlName="'cvv'" [placeholder]="'244'">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-span-1">
+                        <!-- Save -->
+                        <button class="mr-4 bg-blue-400" mat-flat-button  [matTooltip]="'Submit'">
+                            Submit
+                        </button>
+                        <!-- Cancel -->
+                        <button class="ml-auto bg-red-400"  mat-button [matTooltip]="'Cancel'">
+                            Cancel
+                        </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <div class="font-medium">Please pay within 15 days. Thank you for your business.</div>
+                    <div class="flex items-start mt-4">
+                        <img
+                            class="flex-0 w-10 mt-2"
+                            src="assets/images/logo/logo.svg">
+                        <div class="ml-6 text-sm text-secondary">
+                            In condimentum malesuada efficitur. Mauris volutpat placerat auctor. Ut ac congue dolor. Quisque scelerisque lacus sed feugiat fermentum.
+                            Cras aliquet facilisis pellentesque. Nunc hendrerit quam at leo commodo, a suscipit tellus dapibus. Etiam at felis volutpat est mollis lacinia.
+                            Mauris placerat sem sit amet velit mollis, in porttitor ex finibus. Proin eu nibh id libero tincidunt lacinia et eget.
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+</div>

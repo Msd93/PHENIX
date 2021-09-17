@@ -21,12 +21,12 @@ export const categories = [
         slug : 'android'
     }
 ];
-export const courses = [
+export const orderItems = [
     {
         id         : '694e4e5f-f25f-470b-bd0e-26b1d4f64028',
         title      : 'Basics of Angular',
         slug       : 'basics-of-angular',
-        description: 'Introductory course for Angular and framework basics',
+        description: 'Introductory orderItem for Angular and framework basics',
         category   : 'web',
         duration   : 30,
         totalSteps : 11,
@@ -41,7 +41,7 @@ export const courses = [
         id         : 'f924007a-2ee9-470b-a316-8d21ed78277f',
         title      : 'Basics of TypeScript',
         slug       : 'basics-of-typeScript',
-        description: 'Beginner course for Typescript and its basics',
+        description: 'Beginner orderItem for Typescript and its basics',
         category   : 'web',
         duration   : 60,
         totalSteps : 11,
@@ -101,7 +101,7 @@ export const courses = [
         id         : 'fad2ab23-1011-4028-9a54-e52179ac4a50',
         title      : 'Manage Your Pivotal Cloud Foundry App\'s Using Apigee Edge',
         slug       : 'manage-your-pivotal-cloud-foundry-apps-using-apigee-Edge',
-        description: 'Introductory course for Pivotal Cloud Foundry App',
+        description: 'Introductory orderItem for Pivotal Cloud Foundry App',
         category   : 'cloud',
         duration   : 90,
         totalSteps : 11,
@@ -236,7 +236,7 @@ export const courses = [
         id         : '65e0a0e0-d8c0-4117-a3cb-eb74f8e28809',
         title      : 'Simulating a Thread Network Using OpenThread',
         slug       : 'simulating-a-thread-network-using-openthread',
-        description: 'Introductory course for OpenThread and Simulating a Thread Network',
+        description: 'Introductory orderItem for OpenThread and Simulating a Thread Network',
         category   : 'web',
         duration   : 45,
         totalSteps : 11,
@@ -293,7 +293,7 @@ export const courses = [
         }
     }
 ];
-export const demoCourseContent = `
+export const demoOrderItemContent = `
 <p class="lead">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam lab et fugiat id magnam minus nemo quam
     voluptatem. Culpa deleniti explica nisi quod soluta.
@@ -649,71 +649,71 @@ export const demoCourseContent = `
     Assumenda, eum, minima! Autem consectetur fugiat iste sit! Nobis omnis quo repellendus.
 </p>
 `;
-export const demoCourseSteps = [
+export const demoOrderItemSteps = [
     {
         order   : 0,
         title   : 'Introduction',
         subtitle: 'Introducing the library and how it works',
-        content : `<h2 class="text-2xl sm:text-3xl">Introduction</h1> ${demoCourseContent}`
+        content : `<h2 class="text-2xl sm:text-3xl">Introduction</h1> ${demoOrderItemContent}`
     },
     {
         order   : 1,
         title   : 'Get the sample code',
         subtitle: 'Where to find the sample code and how to access it',
-        content : `<h2 class="text-2xl sm:text-3xl">Get the sample code</h1> ${demoCourseContent}`
+        content : `<h2 class="text-2xl sm:text-3xl">Get the sample code</h1> ${demoOrderItemContent}`
     },
     {
         order   : 2,
         title   : 'Create a Firebase project and Set up your app',
         subtitle: 'How to create a basic Firebase project and how to run it locally',
-        content : `<h2 class="text-2xl sm:text-3xl">Create a Firebase project and Set up your app</h1> ${demoCourseContent}`
+        content : `<h2 class="text-2xl sm:text-3xl">Create a Firebase project and Set up your app</h1> ${demoOrderItemContent}`
     },
     {
         order   : 3,
         title   : 'Install the Firebase Command Line Interface',
         subtitle: 'Setting up the Firebase CLI to access command line tools',
-        content : `<h2 class="text-2xl sm:text-3xl">Install the Firebase Command Line Interface</h1> ${demoCourseContent}`
+        content : `<h2 class="text-2xl sm:text-3xl">Install the Firebase Command Line Interface</h1> ${demoOrderItemContent}`
     },
     {
         order   : 4,
         title   : 'Deploy and run the web app',
         subtitle: 'How to build, push and run the project remotely',
-        content : `<h2 class="text-2xl sm:text-3xl">Deploy and run the web app</h1> ${demoCourseContent}`
+        content : `<h2 class="text-2xl sm:text-3xl">Deploy and run the web app</h1> ${demoOrderItemContent}`
     },
     {
         order   : 5,
         title   : 'The Functions Directory',
         subtitle: 'Introducing the Functions and Functions Directory',
-        content : `<h2 class="text-2xl sm:text-3xl">The Functions Directory</h1> ${demoCourseContent}`
+        content : `<h2 class="text-2xl sm:text-3xl">The Functions Directory</h1> ${demoOrderItemContent}`
     },
     {
         order   : 6,
         title   : 'Import the Cloud Functions and Firebase Admin modules',
         subtitle: 'Create your first Function and run it to administer your app',
-        content : `<h2 class="text-2xl sm:text-3xl">Import the Cloud Functions and Firebase Admin modules</h1> ${demoCourseContent}`
+        content : `<h2 class="text-2xl sm:text-3xl">Import the Cloud Functions and Firebase Admin modules</h1> ${demoOrderItemContent}`
     },
     {
         order   : 7,
         title   : 'Welcome New Users',
         subtitle: 'How to create a welcome message for the new users',
-        content : `<h2 class="text-2xl sm:text-3xl">Welcome New Users</h1> ${demoCourseContent}`
+        content : `<h2 class="text-2xl sm:text-3xl">Welcome New Users</h1> ${demoOrderItemContent}`
     },
     {
         order   : 8,
         title   : 'Images moderation',
         subtitle: 'How to moderate images; crop, resize, optimize',
-        content : `<h2 class="text-2xl sm:text-3xl">Images moderation</h1> ${demoCourseContent}`
+        content : `<h2 class="text-2xl sm:text-3xl">Images moderation</h1> ${demoOrderItemContent}`
     },
     {
         order   : 9,
         title   : 'New Message Notifications',
         subtitle: 'How to create and push a notification to a user',
-        content : `<h2 class="text-2xl sm:text-3xl">New Message Notifications</h1> ${demoCourseContent}`
+        content : `<h2 class="text-2xl sm:text-3xl">New Message Notifications</h1> ${demoOrderItemContent}`
     },
     {
         order   : 10,
         title   : 'Congratulations!',
         subtitle: 'Nice work, you have created your first application',
-        content : `<h2 class="text-2xl sm:text-3xl">Congratulations!</h1> ${demoCourseContent}`
+        content : `<h2 class="text-2xl sm:text-3xl">Congratulations!</h1> ${demoOrderItemContent}`
     }
 ];

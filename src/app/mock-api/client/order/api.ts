@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { cloneDeep } from 'lodash-es';
 import { FuseMockApiService } from '@fuse/lib/mock-api/mock-api.service';
-import { categories as categoriesData, courses as coursesData, demoCourseSteps as demoCourseStepsData } from 'app/mock-api/apps/academy/data';
+import { categories as categoriesData, orderItems as orderItemsData, demoOrderItemSteps as demoOrderItemStepsData } from 'app/mock-api/client/order/data';
 
 @Injectable({
     providedIn: 'root'
 })
-export class AcademyMockApi
+export class OrderMockApi
 {
     private _categories: any[] = categoriesData;
-    private _courses: any[] = coursesData;
-    private _demoCourseSteps: any[] = demoCourseStepsData;
+    private _orderItems: any[] = orderItemsData;
+    private _demoOrderItemSteps: any[] = demoOrderItemStepsData;
 
     /**
      * Constructor
@@ -34,7 +34,7 @@ export class AcademyMockApi
         // @ Categories - GET
         // -----------------------------------------------------------------------------------------------------
         this._fuseMockApiService
-            .onGet('api/apps/academy/categories')
+            .onGet('api/client/order/categories')
             .reply(() => {
 
                 // Clone the categories
@@ -47,42 +47,42 @@ export class AcademyMockApi
             });
 
         // -----------------------------------------------------------------------------------------------------
-        // @ Courses - GET
+        // @ OrderItems - GET
         // -----------------------------------------------------------------------------------------------------
         this._fuseMockApiService
-            .onGet('api/apps/academy/courses')
+            .onGet('api/client/order/orderItems')
             .reply(() => {
 
-                // Clone the courses
-                const courses = cloneDeep(this._courses);
+                // Clone the orderItems
+                const orderItems = cloneDeep(this._orderItems);
 
-                return [200, courses];
+                return [200, orderItems];
             });
 
         // -----------------------------------------------------------------------------------------------------
-        // @ Course - GET
+        // @ OrderItem - GET
         // -----------------------------------------------------------------------------------------------------
         this._fuseMockApiService
-            .onGet('api/apps/academy/courses/course')
+            .onGet('api/client/order/orderItems/orderItem')
             .reply(({request}) => {
 
                 // Get the id from the params
                 const id = request.params.get('id');
 
-                // Clone the courses and steps
-                const courses = cloneDeep(this._courses);
-                const steps = cloneDeep(this._demoCourseSteps);
+                // Clone the orderItems and steps
+                const orderItems = cloneDeep(this._orderItems);
+                const steps = cloneDeep(this._demoOrderItemSteps);
 
-                // Find the course and attach steps to it
-                const course = courses.find(item => item.id === id);
-                if ( course )
+                // Find the orderItem and attach steps to it
+                const orderItem = orderItems.find(item => item.id === id);
+                if ( orderItem )
                 {
-                    course.steps = steps;
+                    orderItem.steps = steps;
                 }
 
                 return [
                     200,
-                    course
+                    orderItem
                 ];
             });
     }
