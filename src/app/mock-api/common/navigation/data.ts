@@ -50,15 +50,6 @@ export const defaultNavigation: FuseNavigationItem[] = [
         children: [
 
         ]
-        // children: [
-        //     {
-        //         id: 'pages.settings',
-        //         title: 'Search photo',
-        //         type: 'basic',
-        //         icon: 'heroicons_solid:search',
-        //         link: '/media/photo/search-photo'
-        //     }
-        // ]
     },
     {
         id: 'video',
@@ -166,38 +157,32 @@ export const futuristicNavigation: FuseNavigationItem[] = [
 ];
 export const horizontalNavigation: FuseNavigationItem[] = [
     {
+        id: 'dashboards',
+        title: 'Tableau de bord',
+        type: 'group',
+        icon: 'heroicons_outline:chart-pie',
+        children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
+    },
+    {
         id: 'photo',
         title: 'Photo',
-        type: 'group',
+        type: 'basic',
         icon: 'heroicons_outline:qrcode',
         children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
     },
     {
         id: 'video',
         title: 'Video',
-        type: 'group',
+        type: 'basic',
         icon: 'heroicons_outline:collection',
         children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
     },
     {
         id: 'texture',
         title: 'Texture',
-        type: 'group',
+        type: 'basic',
         icon: 'heroicons_outline:menu',
         children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
     },
-    {
-        id: 'dashboards',
-        title: 'Tableau de bord',
-        type: 'group',
-        icon: 'heroicons_outline:home',
-        children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
-    },
-    {
-        id: 'parametrage',
-        title: 'Parametrage',
-        type: 'group',
-        icon: 'heroicons_outline:document-duplicate',
-        children: [] // This will be filled from defaultNavigation so we don't have to manage multiple sets of the same navigation
-    },
+
 ];

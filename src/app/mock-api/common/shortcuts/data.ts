@@ -33,4 +33,12 @@ export const shortcuts = [
         link       : '/media/photo/search-photo',
         useRouter  : true
     },
+    // {
+    //     id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+    //     label      : 'Parametrage',
+    //     description: 'Espace de configuration du compte',
+    //     icon       : 'heroicons_outline:cog',
+    //     link       : '/pages/settings',
+    //     useRouter  : true
+    // },
 ];
