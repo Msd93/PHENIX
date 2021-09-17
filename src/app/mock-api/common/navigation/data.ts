@@ -48,6 +48,20 @@ export const defaultNavigation: FuseNavigationItem[] = [
         type: 'group',
         icon: 'heroicons_outline:document',
         children: [
+            {
+                id: 'details.picture',
+                title: 'Détails Photo',
+                type: 'basic',
+                icon: 'heroicons_outline:cog',
+                link: '/media/photo/details-picture'
+            },
+            {
+                id: 'upload.picture',
+                title: 'Upload Photo',
+                type: 'basic',
+                icon: 'heroicons_outline:cog',
+                link: '/media/photo/upload-picture'
+            }
 
         ]
     },
