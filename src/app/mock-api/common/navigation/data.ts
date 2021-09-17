@@ -47,15 +47,15 @@ export const defaultNavigation: FuseNavigationItem[] = [
         //subtitle: 'Custom made page designs',
         type: 'group',
         icon: 'heroicons_outline:document',
-        children: [
-            {
-                id: 'pages.settings',
-                title: 'Search photo',
-                type: 'basic',
-                icon: 'heroicons_solid:search',
-                link: '/media/photo/search-photo'
-            }
-        ]
+        // children: [
+        //     {
+        //         id: 'pages.settings',
+        //         title: 'Search photo',
+        //         type: 'basic',
+        //         icon: 'heroicons_solid:search',
+        //         link: '/media/photo/search-photo'
+        //     }
+        // ]
     },
     {
         id: 'video',

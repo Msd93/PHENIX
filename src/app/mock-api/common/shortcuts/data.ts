@@ -8,4 +8,12 @@ export const shortcuts = [
         link       : '/client/order',
         useRouter  : true
     },
+    {
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+        label      : 'Rechercher des images',
+        description: 'Espace de recherche des image',
+        icon       : 'heroicons_outline:search',
+        link       : '/media/photo/search-photo',
+        useRouter  : true
+    },
 ];
