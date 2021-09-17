@@ -15,26 +15,49 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FuseCardModule } from '@fuse/components/card';
 import { SharedModule } from 'app/shared/shared.module';
+import { SearchPhotoComponent } from './search-photo/search-photo.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
+import { FuseScrollbarModule } from '@fuse/directives/scrollbar';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ColorPickerModule } from '@iplab/ngx-color-picker';
 
 
 @NgModule({
   declarations: [
+    SearchPhotoComponent,
     DetailsPictureComponent
   ],
   imports: [
     CommonModule,
     PhotoRoutingModule,
-
     MatButtonModule,
-    MatButtonToggleModule,
     MatCheckboxModule,
-    MatDividerModule,
+    MatButtonToggleModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
     MatMenuModule,
-    MatProgressBarModule,
+    MatSidenavModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
+    MatTableModule,
     MatTooltipModule,
+    MatSelectModule,
+    FuseScrollbarModule,
+    MatDividerModule,
+    MatAutocompleteModule,
+    MatSlideToggleModule,
+
+    
+    ColorPickerModule, // module color picker
+    MatProgressBarModule,
     FuseCardModule,
     SharedModule,
   ]
