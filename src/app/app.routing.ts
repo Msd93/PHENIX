@@ -89,11 +89,11 @@ export const appRoutes: Route[] = [
                 {path: 'video', loadChildren: () => import('app/modules/media/video/video.module').then(m => m.VideoModule)},
                 {path: 'photo', loadChildren: () => import('app/modules/media/texture/texture.module').then(m => m.TextureModule)},
             ]},
-            // Box
-            {path: 'box', children: [
+            // Client
+            {path: 'client', children: [
 
-                // Photo
-                {path: 'panier', loadChildren: () => import('app/modules/box/panier/panier.module').then(m => m.PanierModule)},
+                // Order
+                {path: 'order', loadChildren: () => import('app/modules/client/order/order.module').then(m => m.OrderModule)},
             ]},
             // Pages
             {path: 'pages', children: [
