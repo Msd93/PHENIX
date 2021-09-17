@@ -11,7 +11,7 @@ export const shortcuts = [
     {
         id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
         label      : 'Details Image',
-        description: 'Prévisuation d\'une image et celles similaire',
+        description: 'Prévisuation d\'une image et celles similaires',
         icon       : 'heroicons_outline:cog',
         link       : '/media/photo/details-picture',
         useRouter  : true
