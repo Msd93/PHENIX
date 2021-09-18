@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { debounceTime, filter, map, takeUntil } from 'rxjs/operators';
 import { fuseAnimations } from '@fuse/animations/public-api';
+import { LoginComponent } from 'app/modules/home-phenix/login/login.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
     selector     : 'search',
@@ -30,7 +32,8 @@ export class SearchComponent implements OnChanges, OnInit, OnDestroy
     constructor(
         private _elementRef: ElementRef,
         private _httpClient: HttpClient,
-        private _renderer2: Renderer2
+        private _renderer2: Renderer2,
+        private _matDialog: MatDialog
     )
     {
     }
@@ -211,4 +214,17 @@ export class SearchComponent implements OnChanges, OnInit, OnDestroy
     {
         return item.id || index;
     }
+
+     /**
+     * Add a new login
+     */
+   login(): void
+   {
+       this._matDialog.open(LoginComponent, {
+           autoFocus: false,
+           data     : {
+               note: {}
+           }
+       });
+   }
 }
