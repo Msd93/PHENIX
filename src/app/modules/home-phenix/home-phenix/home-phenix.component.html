@@ -1,0 +1,60 @@
+<div class="flex flex-col flex-auto min-w-0">
+
+    <!-- Header -->
+    <div class="relative pt-8 pb-28 px-4 sm:pt-20 sm:pb-48 sm:px-16 overflow-hidden"style="background-image: url('https://cdn.pixabay.com/photo/2021/08/29/19/25/matterhorn-6584103_1280.jpg')">
+        <!-- Background - @formatter:off -->
+        
+        <!-- @formatter:on -->
+        <div class="z-10 relative flex flex-col items-center">
+            
+            <!-- <div class="mt-6 sm:text-2xl text-center tracking-tight text-secondary"> -->
+            <div class="mt-1 text-2xl sm:text-2xl font-extrabold tracking-tight leading-tight text-center">
+                Find the media you need,with the correct content.
+            </div>
+
+            <!-- <mat-form-field class="fuse-mat-no-subscript fuse-mat-rounded fuse-mat-bold w-full max-w-80 sm:max-w-120 mt-10 sm:mt-20"> -->
+                <mat-form-field [color]="'primary'" class="fuse-mat-dense fuse-mat-no-subscript fuse-mat-rounded max-w-80 w-full min-w-120 mt-5">
+                <input  matInput >
+                <mat-icon
+                    matPrefix
+                    [svgIcon]="'heroicons_outline:search'"></mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+  
+       <!-- Toolbar -->
+       <div class="flex min-h-16 px-4 md:px-6 border-b bg-gray-400 dark:bg-transparent items-center justify-center">
+        <span>Search and get the image you need start now</span>
+       </div>
+       <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-2 sm:py-2 sm:px-8 border-b bg-card dark:bg-transparent">
+        <!-- <div class="flex items-center p-4 sm:p-4  space-x-1 sm:space-x-8 space-y-2"> -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 md:mt-8 flex items-center justify-center space-y-2">
+            <ng-container *ngFor="let component of components">
+                <a
+                    class="flex flex-col rounded-2xl shadow overflow-hidden bg-card-2 hover:shadow-xl transition-shadow duration-200 ease-in-out"
+                    [href]="'https://material.angular.io/components/' + component.id"
+                    target="_blank"
+                    rel="noreferrer">
+                    <img
+                        class="w-ful object-cover border-b"
+                        [src]="'assets/images/ui/angular-material/scenes/' + component.id + '.scene.jpg'">
+                    <div class="py-2 px-5">
+                        <div class="text-xl text-secondary">{{component.name}}</div>
+                        <div class="mt-1 text-secondary">{{component.summary}}</div>
+                    </div>
+                </a>
+
+            </ng-container>
+    </div>
+</div>
+</div>
+<!-- <button
+                        class="ml-4 px-1 sm:px-4 min-w-10"
+                        mat-flat-button
+                        [color]="'primary'"
+                        (click)="addNewNote()">
+                        <mat-icon
+                            class="icon-size-5"
+                            [svgIcon]="'heroicons_solid:plus-circle'"></mat-icon>
+                        <span class="hidden sm:inline-block ml-2">New note</span>
+                    </button> -->
