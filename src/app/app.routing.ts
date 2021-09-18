@@ -95,6 +95,14 @@ export const appRoutes: Route[] = [
                 // Order
                 {path: 'order', loadChildren: () => import('app/modules/client/order/order.module').then(m => m.OrderModule)},
             ]},
+
+            // Home Phenix
+            {path: 'home-phenix', children: [
+
+                // Order
+                {path: '', loadChildren: () => import('app/modules/home-phenix/home-phenix.module').then(m => m.HomePhenixModule)},
+            ]},
+
             // Pages
             {path: 'pages', children: [
 
