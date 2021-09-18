@@ -27,6 +27,9 @@ const IMG: any = [
 })
 export class SearchPhotoComponent implements OnInit {
 
+  drawerMode: 'over' | 'side' = 'side';
+  drawerOpened: boolean = true;
+
   images = IMG;
   public chromeControl = new ColorPickerControl()
                               .setValueFrom(ColorsTable.aquamarine)
@@ -44,5 +47,9 @@ export class SearchPhotoComponent implements OnInit {
   setHex(): void{
     this.selectedHex = this.sketchControl.value.toHexString();
     console.log('valeur HEX => ', this.selectedHex);
+  }
+  /**Filter closed */
+  closeFilter(){
+    this.drawerOpened = false;
   }
 }
