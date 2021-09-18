@@ -6,6 +6,7 @@ import { BehaviorSubject, combineLatest, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { OrderService } from 'app/modules/client/order/order.service';
 import { Category, OrderItem } from 'app/modules/client/order/order.types';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
     selector       : 'order-list',
@@ -27,6 +28,13 @@ export class OrderListComponent implements OnInit, OnDestroy
         query$        : new BehaviorSubject(''),
         hideCompleted$: new BehaviorSubject(false)
     };
+
+    paymentInfos = new FormGroup({
+        numeroClient: new FormControl(''),
+        numeroCarte: new FormControl(''),
+        expiration: new FormControl(''),
+        cvv: new FormControl('')
+      });
 
     private _unsubscribeAll: Subject<any> = new Subject<any>();
 

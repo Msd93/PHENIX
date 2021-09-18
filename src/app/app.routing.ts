@@ -100,7 +100,7 @@ export const appRoutes: Route[] = [
             {path: 'home-phenix', children: [
 
                 // Order
-                {path: 'home-phenix', loadChildren: () => import('app/modules/home-phenix/home-phenix.module').then(m => m.HomePhenixModule)},
+                {path: '', loadChildren: () => import('app/modules/home-phenix/home-phenix.module').then(m => m.HomePhenixModule)},
             ]},
 
             // Pages

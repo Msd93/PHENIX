@@ -11,7 +11,7 @@ export const shortcuts = [
     {
         id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
         label      : 'Details Image',
-        description: 'Prévisuation d\'une image et celles similaire',
+        description: 'Prévisuation d\'une image et celles similaires',
         icon       : 'heroicons_outline:cog',
         link       : '/media/photo/details-picture',
         useRouter  : true
@@ -33,12 +33,28 @@ export const shortcuts = [
         link       : '/media/photo/search-photo',
         useRouter  : true
     },
+    // {
+    //     id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+    //     label      : 'Parametrage',
+    //     description: 'Espace de configuration du compte',
+    //     icon       : 'heroicons_outline:cog',
+    //     link       : '/pages/settings',
+    //     useRouter  : true
+    // },
     {
         id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
-        label      : 'Home phenix',
-        description: 'Ecran Accueil',
+        label      : 'Home',
+        description: 'Ecran D\'accueil',
         icon       : 'heroicons_outline:search',
         link       : '/home-phenix/home-phenix',
+        useRouter  : true
+    },
+    {
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+        label      : 'Contact Us',
+        description: 'Contacter le Service',
+        icon       : 'heroicons_outline:user',
+        link       : '/home-phenix/contact-phenix',
         useRouter  : true
     },
 ];
