@@ -67,7 +67,7 @@ export class HomePhenixComponent implements OnInit, OnDestroy {
             ]
         },
         {
-            id               : 'laptop-336373_640 (12)',
+            id               : 'laptop-336373_640 (10)',
             name              : 'Photo name',
             summary          : 'Lorem ipsum.',
             exampleSpecs     : {
@@ -207,12 +207,6 @@ export class HomePhenixComponent implements OnInit, OnDestroy {
    */
   ngOnInit(): void
   {
-    //   // Get the FAQs
-    //   this._helpCenterService.faqs$
-    //       .pipe(takeUntil(this._unsubscribeAll))
-    //       .subscribe((faqCategories) => {
-    //         //   this.faqCategory = faqCategories[0];
-    //       });
   }
 
   /**

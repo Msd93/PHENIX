@@ -11,7 +11,7 @@ export const HomePhenixRoutingModule: Route[]=[
         path :'home-phenix',
         component: HomePhenixComponent},
         {
-            path :'login',
+            path :'login-phenix',
             component: HomePhenixComponent},
     {
     path :'contact-phenix',
