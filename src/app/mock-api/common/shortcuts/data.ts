@@ -49,6 +49,14 @@ export const shortcuts = [
         useRouter  : true
     },
     {
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548w',
+        label      : 'Favorite Image',
+        description: 'Liste des images favorites',
+        icon       : 'mat_solid:favorite_border',
+        link       : '/media/photo/favorite-picture',
+        useRouter  : true
+    },
+    {
         id         : 'a1ee91d3-e2cb-459b-9be9-a184694f548b',
         label      : 'Chargement fichier',
         description: 'Chargement fichier Drag and Drop',
