@@ -4,7 +4,7 @@ export const shortcuts = [
         id         : 'a1ae91d3-e2cb-359b-9be9-a184694f548a',
         label      : 'Tableau de bord',
         description: 'Statistiques Globales',
-        icon       : 'heroicons_outline:cog',
+        icon       : 'heroicons_outline:chart-pie',
         link       : '/dashboards/global',
         useRouter  : true
     },
