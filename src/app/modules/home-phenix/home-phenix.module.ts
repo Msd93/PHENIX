@@ -20,12 +20,14 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { LoginComponent } from './login/login.component';
 import { ContactPhenixComponent } from './contact-phenix/contact-phenix.component';
+import { SellPhenixComponent } from './sell-phenix/sell-phenix.component';
 
 @NgModule({
   declarations: [
     HomePhenixComponent,
     LoginComponent,
-    ContactPhenixComponent
+    ContactPhenixComponent,
+    SellPhenixComponent
   ],
   imports: [
     CommonModule,
