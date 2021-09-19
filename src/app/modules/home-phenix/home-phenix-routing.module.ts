@@ -3,6 +3,7 @@ import { AboutPhenixComponent } from './about-phenix/about-phenix.component';
 import { ContactPhenixComponent } from './contact-phenix/contact-phenix.component';
 import { HomePhenixComponent } from './home-phenix/home-phenix.component';
 import { InscriptionPhenixComponent } from './inscription-phenix/inscription-phenix.component';
+import { LegalPhenixComponent } from './legal-phenix/legal-phenix.component';
 import { SellPhenixComponent } from './sell-phenix/sell-phenix.component';
 import { TemplateGlobalePhenixComponent } from './template-globale-phenix/template-globale-phenix.component';
 
@@ -36,5 +37,8 @@ export const HomePhenixRoutingModule: Route[]=[
         path :'template-global-phenix',
         component: TemplateGlobalePhenixComponent
     },
-   
+    {
+        path :'legal-phenix',
+        component: LegalPhenixComponent
+    },
 ]

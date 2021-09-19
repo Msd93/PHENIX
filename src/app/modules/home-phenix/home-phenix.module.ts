@@ -24,6 +24,7 @@ import { SellPhenixComponent } from './sell-phenix/sell-phenix.component';
 import { InscriptionPhenixComponent } from './inscription-phenix/inscription-phenix.component';
 import { AboutPhenixComponent } from './about-phenix/about-phenix.component';
 import { TemplateGlobalePhenixComponent } from './template-globale-phenix/template-globale-phenix.component';
+import { LegalPhenixComponent } from './legal-phenix/legal-phenix.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TemplateGlobalePhenixComponent } from './template-globale-phenix/templa
     SellPhenixComponent,
     InscriptionPhenixComponent,
     AboutPhenixComponent,
-    TemplateGlobalePhenixComponent
+    TemplateGlobalePhenixComponent,
+    LegalPhenixComponent
   ],
   imports: [
     CommonModule,

@@ -88,6 +88,14 @@ export const shortcuts = [
         link       : '/home-phenix/template-global-phenix',
         useRouter  : true
     },
+    {
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+        label      : 'Legal',
+        description: 'Legal phenix',
+        icon       : 'heroicons_outline:academic-cap',
+        link       : '/home-phenix/legal-phenix',
+        useRouter  : true
+    },
     // {
     //     id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548z',
     //     label      : 'Tableau de bord',
