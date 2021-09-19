@@ -22,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 import { ContactPhenixComponent } from './contact-phenix/contact-phenix.component';
 import { SellPhenixComponent } from './sell-phenix/sell-phenix.component';
 import { InscriptionPhenixComponent } from './inscription-phenix/inscription-phenix.component';
+import { AboutPhenixComponent } from './about-phenix/about-phenix.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { InscriptionPhenixComponent } from './inscription-phenix/inscription-phe
     LoginComponent,
     ContactPhenixComponent,
     SellPhenixComponent,
-    InscriptionPhenixComponent
+    InscriptionPhenixComponent,
+    AboutPhenixComponent
   ],
   imports: [
     CommonModule,

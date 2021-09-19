@@ -17,6 +17,14 @@ export const shortcuts = [
         useRouter  : true
     },
     {
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548y',
+        label      : 'A propos',
+        description: 'Nos services',
+        icon       : 'heroicons_outline:office-building',
+        link       : '/home-phenix/about-phenix',
+        useRouter  : true
+    },
+    {
         id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548e',
         label      : 'Rechercher des images',
         description: 'Espace de recherche des image',
