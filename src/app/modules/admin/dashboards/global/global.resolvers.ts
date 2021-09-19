@@ -6,7 +6,7 @@ import { GlobalService } from 'app/modules/admin/dashboards/global/global.servic
 @Injectable({
     providedIn: 'root'
 })
-export class AnalyticsResolver implements Resolve<any>
+export class GlobalResolver implements Resolve<any>
 {
     /**
      * Constructor
