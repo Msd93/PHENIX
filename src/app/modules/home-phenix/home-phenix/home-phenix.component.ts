@@ -14,6 +14,26 @@ import { LoginComponent } from '../login/login.component';
 })
 export class HomePhenixComponent implements OnInit, OnDestroy {
 
+    selectedValue: any;
+  searchTxt: any;
+
+  items = [{
+    value : 100,
+    viewValue : 100
+  },{
+    value : 200,
+    viewValue : 200
+  },{
+    value : 300,
+    viewValue : 300
+  }];
+    transform(items: any[], searchTxt: string): any[] {
+        if(!items || !items.length) return items;
+        if(!searchTxt || !searchTxt.length) return items;
+        return items.filter(item => {
+          return item.viewValue.toString().toLowerCase().indexOf(searchTxt.toLowerCase()) > -1
+        });
+      }
 //   faqCategory: FaqCategory;
   private _unsubscribeAll: Subject<any> = new Subject();
   components: any[];
@@ -25,7 +45,7 @@ export class HomePhenixComponent implements OnInit, OnDestroy {
   {
     this.components = [
         {
-            id               : 'laptop-336373_640 (9)',
+            id               : 'laptop-336373_640 (4)',
             name             : 'Photo name',
             summary          : 'Lorem ipsum.',
             exampleSpecs     : {

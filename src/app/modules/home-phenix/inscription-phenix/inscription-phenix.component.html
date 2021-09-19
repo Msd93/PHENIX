@@ -1,17 +1,17 @@
-<div class="w-full max-w-80 sm:w-80 mx-auto sm:mx-0">
+<div class="w-full max-w-80 sm:w-80 mx-50 sm:mx-20">
     <!-- Logo -->
    
 
     <!-- Title -->
     <!-- <div class="mt-8 text-4xl font-extrabold tracking-tight leading-tight">Sign in</div> -->
-    <div class="flex items-baseline mt-0.5 font-medium">
-        <div>Creer Votre Compte</div>
+    <div class="flex items-center mt-0.5 font-medium mx-20">
+        <div>Créer Votre Compte</div>
         <!-- <a
             class="ml-1 text-primary-500 hover:underline"
             [routerLink]="['/sign-up']">Sign up
         </a> -->
     </div>
-    <div class="w-20 justify-center">
+    <div class="w-20 justify-center mx-30">
         <img src="assets/images/logo/logo.svg">
     </div>
     <!-- Alert -->
@@ -27,7 +27,7 @@
 
     <!-- Sign in form -->
     <form
-        class="mt-16"
+        class="mt-20"
         [formGroup]="signInForm"
         #signInNgForm="ngForm">
 
@@ -42,9 +42,13 @@
                     [svgIcon]="'heroicons_solid:user-circle'"></mat-icon>
             </mat-form-field>
             <mat-form-field
-                class="flex-auto min-w-150 ml-8 xs:ml-0">
+                class="flex-auto min-w-130 ml-4 xs:ml-2">
                 <mat-label>Last name</mat-label>
                 <input matInput>
+                <mat-icon
+                class="icon-size-5"
+                matSuffix
+                [svgIcon]="'heroicons_solid:user-circle'"></mat-icon>
             </mat-form-field>
         </div>
         <!-- Email field -->
@@ -54,6 +58,10 @@
                 id="email"
                 matInput
                 [formControlName]="'email'">
+                <mat-icon
+                class="icon-size-5"
+                matSuffix
+                [svgIcon]="'heroicons_solid:mail'"></mat-icon>
             <mat-error *ngIf="signInForm.get('email').hasError('required')">
                 Email address is required
             </mat-error>

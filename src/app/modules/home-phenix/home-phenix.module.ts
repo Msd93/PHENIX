@@ -25,6 +25,7 @@ import { InscriptionPhenixComponent } from './inscription-phenix/inscription-phe
 import { AboutPhenixComponent } from './about-phenix/about-phenix.component';
 import { TemplateGlobalePhenixComponent } from './template-globale-phenix/template-globale-phenix.component';
 import { LegalPhenixComponent } from './legal-phenix/legal-phenix.component';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { LegalPhenixComponent } from './legal-phenix/legal-phenix.component';
     MatInputModule,
     MatProgressSpinnerModule,
     FuseAlertModule,
+    QuillModule.forRoot(),
     SharedModule
   ]
   
