@@ -4,6 +4,7 @@ import { ContactPhenixComponent } from './contact-phenix/contact-phenix.componen
 import { HomePhenixComponent } from './home-phenix/home-phenix.component';
 import { InscriptionPhenixComponent } from './inscription-phenix/inscription-phenix.component';
 import { SellPhenixComponent } from './sell-phenix/sell-phenix.component';
+import { TemplateGlobalePhenixComponent } from './template-globale-phenix/template-globale-phenix.component';
 
 export const HomePhenixRoutingModule: Route[]=[
     {
@@ -31,5 +32,9 @@ export const HomePhenixRoutingModule: Route[]=[
         path :'about-phenix',
         component: AboutPhenixComponent
     },
-
+    {
+        path :'template-global-phenix',
+        component: TemplateGlobalePhenixComponent
+    },
+   
 ]

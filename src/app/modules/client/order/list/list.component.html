@@ -108,19 +108,19 @@
             <form class="col-span-3 h-80">
 
                 <mat-form-field class="fuse-mat-dense flex-auto w-full sm:text-sm md:text-base">
-                    <input matInput formControl="numeroCarte" [placeholder]="'4235 8173 5336 1102'">
+                    <input matInput [ngClass]="formFieldHelpers"  [placeholder]="'4235 8173 5336 1102'">
                 </mat-form-field>
                 <mat-form-field class="fuse-mat-dense flex-auto w-full sm:text-sm md:text-base">
-                    <input matInput formControl="nomClient" [placeholder]="'André Michel'">
+                    <input matInput [ngClass]="formFieldHelpers" formControl="nomClient" [placeholder]="'André Michel'">
                 </mat-form-field>
                 <div class="col-span-2">
                     <mat-form-field class="fuse-mat-dense col-span-2 flex-auto m:text-sm md:text-base">
-                        <input matInput formControl="expiration" [placeholder]="'16/21'">
+                        <input matInput [ngClass]="formFieldHelpers"  [placeholder]="'16/21'">
                     </mat-form-field>
                 </div>
                 <div class="col-span-1">
                     <mat-form-field class="fuse-mat-dense col-span-1 flex-auto m:text-sm md:text-base">
-                        <input matInput formControl="cvv" [placeholder]="'244'">
+                        <input matInput [ngClass]="formFieldHelpers"  [placeholder]="'244'">
                     </mat-form-field>
                 </div>
                 <div class="col-span-1">

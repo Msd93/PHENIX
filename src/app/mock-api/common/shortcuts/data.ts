@@ -1,7 +1,7 @@
 /* eslint-disable */
 export const shortcuts = [
     {
-        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548a',
+        id         : 'a1ae91d3-e2cb-359b-9be9-a184694f548a',
         label      : 'Tableau de bord',
         description: 'Statistiques Globales',
         icon       : 'heroicons_outline:cog',
@@ -9,11 +9,19 @@ export const shortcuts = [
         useRouter  : true
     },
     {
-        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548v',
+        id         : 'a1ae91d3-e2cb-759b-9be9-a184694f548v',
         label      : 'Home',
         description: 'Ecran D\'accueil',
         icon       : 'heroicons_outline:home',
         link       : '/home-phenix/home-phenix',
+        useRouter  : true
+    },
+    {
+        id         : 'a1ae91d3-e2cb-459c-9be4-a184694f548y',
+        label      : 'Contact Us',
+        description: 'Contacter le Service',
+        icon       : 'heroicons_outline:user',
+        link       : '/home-phenix/contact-phenix',
         useRouter  : true
     },
     {
@@ -41,7 +49,7 @@ export const shortcuts = [
         useRouter  : true
     },
     {
-        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+        id         : 'a1ee91d3-e2cb-459b-9be9-a184694f548b',
         label      : 'Chargement fichier',
         description: 'Chargement fichier Drag and Drop',
         icon       : 'heroicons_outline:upload',
@@ -49,7 +57,7 @@ export const shortcuts = [
         useRouter  : true
     },
     {
-        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548d',
+        id         : 'a1ae9163-e2cb-459b-9be9-a184694f548d',
         label      : 'Votre Commande',
         description: 'liste des elements commandés',
         icon       : 'heroicons_outline:clipboard-list',
