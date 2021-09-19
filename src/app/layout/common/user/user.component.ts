@@ -5,6 +5,9 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { User } from 'app/core/user/user.types';
 import { UserService } from 'app/core/user/user.service';
+import { MatDialog } from '@angular/material/dialog';
+import { InscriptionPhenixComponent } from 'app/modules/home-phenix/inscription-phenix/inscription-phenix.component';
+import { LoginComponent } from 'app/modules/home-phenix/login/login.component';
 
 @Component({
     selector       : 'user',
@@ -30,7 +33,8 @@ export class UserComponent implements OnInit, OnDestroy
     constructor(
         private _changeDetectorRef: ChangeDetectorRef,
         private _router: Router,
-        private _userService: UserService
+        private _userService: UserService,
+        private _matDialog: MatDialog
     )
     {
     }
@@ -96,4 +100,29 @@ export class UserComponent implements OnInit, OnDestroy
     {
         this._router.navigate(['/sign-out']);
     }
+
+     /**
+     * Add a new inscrire
+     */
+      inscrire(): void
+   {
+       this._matDialog.open(InscriptionPhenixComponent, {
+           autoFocus: false,
+           data     : {
+               note: {}
+           }
+       });
+   }
+
+//    Add a new login
+     
+   login(): void
+   {
+       this._matDialog.open(LoginComponent, {
+           autoFocus: false,
+           data     : {
+               note: {}
+           }
+       });
+   }
 }

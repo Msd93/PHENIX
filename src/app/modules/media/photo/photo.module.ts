@@ -28,6 +28,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ColorPickerModule } from '@iplab/ngx-color-picker';
 import { UploadPictureComponent } from './upload-picture/upload-picture.component';
+import { FavoritePictureComponent } from './favorite-picture/favorite-picture.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { UploadPictureComponent } from './upload-picture/upload-picture.componen
     DetailsPictureComponent,
     UploadPictureComponent,
     SearchPhotoComponent,
-    DetailsPictureComponent
+    DetailsPictureComponent,
+    FavoritePictureComponent
   ],
   imports: [
     CommonModule,

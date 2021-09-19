@@ -1,11 +1,11 @@
 <div class="flex flex-col flex-auto min-w-0 dark:bg-transparent bg-white">
     <!-- <img class="flex flex-auto inline" src="assets/images/babashot/your-order.jpeg" alt="Logo image"> -->
     <!-- Header -->
-    <div class="relative h-80 flex-0 sm:p-16 overflow-hidden bg-gray-800 dark text-center bg-no-repeat" style="background-image: url(assets/images/babashot/homepage2.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+    <div class="relative h-80 flex-0 sm:p-16 overflow-hidden bg-gray-800 dark text-center bg-no-repeat" style="background-image: url(https://cdn.pixabay.com/photo/2015/07/05/11/56/store-832188_1280.jpg); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; ">
         <!-- Background - @formatter:off -->
         <!-- Rings -->
         <div class="mt-1 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center">
-            <span class="sm:text-white-400">Votre commande</span>
+            <span class="text-black">Votre commande</span>
         </div>
 
     </div>
@@ -105,22 +105,22 @@
             <div class="col-span-4 ">
                 <img src="assets/images/babashot/visa.png" class="w-full rounded" alt="">
             </div>
-            <form [formGroup]="paymentInfos" class="col-span-3 h-80">
+            <form class="col-span-3 h-80">
 
                 <mat-form-field class="fuse-mat-dense flex-auto w-full sm:text-sm md:text-base">
-                    <input matInput formControlName="'numeroCarte'" [placeholder]="'4235 8173 5336 1102'">
+                    <input matInput [ngClass]="formFieldHelpers"  [placeholder]="'4235 8173 5336 1102'">
                 </mat-form-field>
                 <mat-form-field class="fuse-mat-dense flex-auto w-full sm:text-sm md:text-base">
-                    <input matInput formControlName="'nomClient" [placeholder]="'André Michel'">
+                    <input matInput [ngClass]="formFieldHelpers" formControl="nomClient" [placeholder]="'André Michel'">
                 </mat-form-field>
                 <div class="col-span-2">
                     <mat-form-field class="fuse-mat-dense col-span-2 flex-auto m:text-sm md:text-base">
-                        <input matInput formControlName="'expiration'" [placeholder]="'16/21'">
+                        <input matInput [ngClass]="formFieldHelpers"  [placeholder]="'16/21'">
                     </mat-form-field>
                 </div>
                 <div class="col-span-1">
                     <mat-form-field class="fuse-mat-dense col-span-1 flex-auto m:text-sm md:text-base">
-                        <input matInput formControlName="'cvv'" [placeholder]="'244'">
+                        <input matInput [ngClass]="formFieldHelpers"  [placeholder]="'244'">
                     </mat-form-field>
                 </div>
                 <div class="col-span-1">

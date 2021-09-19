@@ -6,7 +6,7 @@ import { BehaviorSubject, combineLatest, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { OrderService } from 'app/modules/client/order/order.service';
 import { Category, OrderItem } from 'app/modules/client/order/order.types';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
     selector       : 'order-list',
@@ -29,19 +29,19 @@ export class OrderListComponent implements OnInit, OnDestroy
         hideCompleted$: new BehaviorSubject(false)
     };
 
-    paymentInfos = new FormGroup({
-        numeroClient: new FormControl(''),
-        numeroCarte: new FormControl(''),
-        expiration: new FormControl(''),
-        cvv: new FormControl('')
-      });
+    numeroClient= new FormControl();
+    numeroCarte = new FormControl();
+    expiration =new FormControl();
+    cvv = new FormControl();
 
     private _unsubscribeAll: Subject<any> = new Subject<any>();
 
+    formFieldHelpers: string[] = [''];
     /**
      * Constructor
      */
     constructor(
+        private _formBuilder: FormBuilder,
         private _activatedRoute: ActivatedRoute,
         private _changeDetectorRef: ChangeDetectorRef,
         private _router: Router,
@@ -49,7 +49,13 @@ export class OrderListComponent implements OnInit, OnDestroy
     )
     {
     }
-
+    /**
+     * Get the form field helpers as string
+     */
+     getFormFieldHelpersAsString(): string
+     {
+         return this.formFieldHelpers.join('');
+     }
     // -----------------------------------------------------------------------------------------------------
     // @ Lifecycle hooks
     // -----------------------------------------------------------------------------------------------------

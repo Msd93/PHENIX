@@ -9,6 +9,7 @@ import { NgxFileDropEntry, FileSystemFileEntry, FileSystemDirectoryEntry } from 
 export class UploadPictureComponent implements OnInit {
 
   public files: NgxFileDropEntry[] = [];
+  public imagesUrl: any[] = []; 
   constructor() { }
 
   ngOnInit(): void {
@@ -24,6 +25,17 @@ export class UploadPictureComponent implements OnInit {
 
           // Here you can access the real file
           console.log(droppedFile.fileEntry.name, file);
+
+          // Preview image
+          const reader = new FileReader();
+          fileEntry.file(file => {
+              reader.readAsDataURL(file);
+              reader.onload = () => {
+                this.imagesUrl.push(reader.result);
+              };
+          });
+          console.log('Images', this.imagesUrl);
+          
 
           /**
           // You could upload it like this:
