@@ -79,6 +79,7 @@ export const appRoutes: Route[] = [
             {path: 'dashboards', children: [
                 {path: 'analytics', loadChildren: () => import('app/modules/admin/dashboards/analytics/analytics.module').then(m => m.AnalyticsModule)},
                 {path: 'finance', loadChildren: () => import('app/modules/admin/dashboards/finance/finance.module').then(m => m.FinanceModule)},
+                {path: 'global', loadChildren: () => import('app/modules/admin/dashboards/global/global.module').then(m => m.GlobalModule)},
             ]},
 
             // Media
@@ -87,7 +88,7 @@ export const appRoutes: Route[] = [
                 // Photo
                 {path: 'photo', loadChildren: () => import('app/modules/media/photo/photo.module').then(m => m.PhotoModule)},
                 {path: 'video', loadChildren: () => import('app/modules/media/video/video.module').then(m => m.VideoModule)},
-                {path: 'photo', loadChildren: () => import('app/modules/media/texture/texture.module').then(m => m.TextureModule)},
+                {path: 'texture', loadChildren: () => import('app/modules/media/texture/texture.module').then(m => m.TextureModule)},
             ]},
             // Client
             {path: 'client', children: [
