@@ -29,12 +29,10 @@ export class OrderListComponent implements OnInit, OnDestroy
         hideCompleted$: new BehaviorSubject(false)
     };
 
-    paymentInfos = new FormGroup({
-        numeroClient: new FormControl(''),
-        numeroCarte: new FormControl(''),
-        expiration: new FormControl(''),
-        cvv: new FormControl('')
-      });
+    numeroClient= new FormControl();
+    numeroCarte = new FormControl();
+    expiration =new FormControl();
+    cvv = new FormControl();
 
     private _unsubscribeAll: Subject<any> = new Subject<any>();
 
