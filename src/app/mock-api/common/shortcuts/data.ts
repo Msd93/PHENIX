@@ -57,22 +57,6 @@ export const shortcuts = [
         useRouter  : true
     },
     {
-        id         : 'a1ae9163-e2cb-459b-9be9-a184694f548d',
-        label      : 'Votre Commande',
-        description: 'liste des elements commandés',
-        icon       : 'heroicons_outline:clipboard-list',
-        link       : '/client/order',
-        useRouter  : true
-    },
-    {
-        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548y',
-        label      : 'Contact Us',
-        description: 'Contacter le Service',
-        icon       : 'heroicons_outline:user',
-        link       : '/home-phenix/contact-phenix',
-        useRouter  : true
-    },
-    {
         id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
         label      : 'Sell',
         description: 'Sell your contents',
@@ -96,12 +80,12 @@ export const shortcuts = [
         link       : '/home-phenix/legal-phenix',
         useRouter  : true
     },
-    // {
-    //     id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548z',
-    //     label      : 'Tableau de bord',
-    //     description: 'Statistiques Globales',
-    //     icon       : 'heroicons_outline:cog',
-    //     link       : '/dashboards/global',
-    //     useRouter  : true
-    // },
+    {
+        id         : 'a1ae9163-e2cb-459b-9be9-a184694f548d',
+        label      : 'Votre Commande',
+        description: 'liste des elements commandés',
+        icon       : 'heroicons_outline:clipboard-list',
+        link       : '/client/order',
+        useRouter  : true
+    },
 ];
