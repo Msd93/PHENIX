@@ -26,6 +26,6 @@ import { BoxComponent } from './box.component';
         BoxComponent
     ]
 })
-export class BasketsModule
+export class BoxModule
 {
 }

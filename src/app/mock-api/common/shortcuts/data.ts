@@ -25,7 +25,7 @@ export const shortcuts = [
         useRouter  : true
     },
     {
-        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548y',
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548s',
         label      : 'A propos',
         description: 'Nos services',
         icon       : 'heroicons_outline:office-building',
@@ -65,7 +65,7 @@ export const shortcuts = [
         useRouter  : true
     },
     {
-        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548r',
         label      : 'Sell',
         description: 'Sell your contents',
         icon       : 'heroicons_outline:shopping-bag',
@@ -73,7 +73,7 @@ export const shortcuts = [
         useRouter  : true
     },
     {
-        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548h',
         label      : 'Template Global',
         description: 'Template phenix',
         icon       : 'heroicons_outline:template',
@@ -81,7 +81,7 @@ export const shortcuts = [
         useRouter  : true
     },
     {
-        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548d',
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548f',
         label      : 'Legal',
         description: 'Legal phenix',
         icon       : 'heroicons_outline:academic-cap',
