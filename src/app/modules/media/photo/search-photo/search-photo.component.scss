@@ -21,12 +21,13 @@
   }
   .container .button1 {
     position: absolute;
-    top: 50%;
-    left: 60%;
+    top: 15%;
+    left: 92%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     opacity: 0;
   }
+
   // .container .button2 {
   //   position: absolute;
   //   top: 50%;
@@ -36,6 +37,9 @@
   //   opacity: 0;
   // }
   .container:hover .button1 {
+    opacity: 1;
+  }
+  .button2 {
     opacity: 1;
   }
   
