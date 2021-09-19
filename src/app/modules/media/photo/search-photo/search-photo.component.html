@@ -1,4 +1,5 @@
-<div class="flex flex-col flex-auto w-full h-full bg-card dark:bg-default">
+<div class="flex flex-col flex-auto  overflow-hidden bg-card dark:bg-default">
+
     <!-- Header -->
     <div class="flex flex-0 bg-gray-100">
         <!-- Search -->
@@ -8,96 +9,115 @@
                 <input matInput [autocomplete]="'off'" [placeholder]="'Recherche'" #searchField />
             </mat-form-field>
         </div>
-
     </div>
+    <ng-container>
 
-    <div class="grid h-full sm:grid-cols-1 md:grid-cols-12 gap-2 w-full min-w-0 md:overflow-auto">
+        <mat-drawer-container class="flex-auto h-full" [hasBackdrop]="false">
 
-        <div class="flex flex-col flex-auto space-y-10 p-4 md:col-span-3 divide-y-2 bg-card" fuseScrollbar [fuseScrollbarOptions]="{wheelPropagation: true, suppressScrollY: false}">
-            <!-- Trier Par -->
-            <div class="flex flex-col px-6">
-                <span class="pl-1 text-xl font-semibold inline-flex">
-                    <mat-icon  [svgIcon]="'mat_outline:unfold_more'"></mat-icon>
-                    Trier par
-                </span>
-                <mat-form-field class="flex-auto fuse-mat-no-subscript fuse-mat-rounded pb-3 text-xl gt-xs:pr-3">
-                    <mat-select [placeholder]="'Trier par'">
-                        <mat-option value="select1-1">Meilleurs résultat</mat-option>
-                        <mat-option value="select1-2">Images</mat-option>
-                        <mat-option value="select1-3">Select 1-3</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
-            <!-- Palette couleur -->
-            <div class="flex flex-0 flex-col pt-4 px-6 space-y-2">
-                <div class="flex flex-0 justify-between">
-                    <div class="flex items-center">
-                        <mat-icon class="icon-size-6" [svgIcon]="'mat_outline:format_paint'"></mat-icon>
-                        <div class="font-bold text-xl pl-3 pt-2">Couleur dominante</div>
-                    </div>
-                    <div>
-                        <mat-slide-toggle class="pt-2 pl-4" [color]="'primary'"></mat-slide-toggle>
+            <!-- Drawer -->
+            <mat-drawer class="w-full sm:w-100 lg:border-l lg:shadow-none dark:bg-gray-900" [autoFocus]="false" [mode]="drawerMode" [position]="'start'" [(opened)]="drawerOpened" #drawer>
+                <div class="flex w-full p-3 bg-blue-100">
+                    <div class="flex flex-auto p-0 text-lg font-bold justify-between">
+                        <div class="flex w-8 h-8">
+                            <img class="object-cover" [src]="'assets/images/babashot/filter.png'" alt="Contact avatar" />
+                            <span class="pl-2 pt-2">  Filtres </span>
+                        </div>
+                        <div>
+                            <button (click)="closeFilter()">
+                                <mat-icon  [svgIcon]="'clear'"></mat-icon>
+                            </button>
+                        </div>       
                     </div>
                 </div>
-                <div class="flex flex-0 justify-center">
-                    <!-- <compact-picker></compact-picker> -->
-                    <!-- <compact-picker [control]="chromeControl"></compact-picker> -->
-                    <sketch-picker class="w-100" [control]="sketchControl" (colorChange)="setHex()"></sketch-picker>
-                    <!-- SelectedHEX: {{selectedHex}}  -->
+                <!-- Filter detail -->
+                <div class="flex flex-col flex-auto space-y-6 p-4 md:col-span-3 divide-y-2 bg-card" fuseScrollbar [fuseScrollbarOptions]="{wheelPropagation: true, suppressScrollY: false}">
+                    <!-- Trier Par -->
+                    <div class="flex flex-col px-6">
+                        <span class="pl-1 text-lg font-semibold inline-flex">
+                            <mat-icon  [svgIcon]="'mat_outline:unfold_more'"></mat-icon>
+                            Trier par
+                        </span>
+                        <mat-form-field class="flex-auto fuse-mat-no-subscript fuse-mat-rounded pb-3 text-lg gt-xs:pr-3">
+                            <mat-select [placeholder]="'Trier par'">
+                                <mat-option value="select1-1">Meilleurs résultat</mat-option>
+                                <mat-option value="select1-2">Images</mat-option>
+                                <mat-option value="select1-3">Select 1-3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <!-- Palette couleur -->
+                    <div class="flex flex-0 flex-col pt-4 px-6 space-y-2">
+                        <div class="flex flex-0 justify-between">
+                            <div class="flex items-center">
+                                <mat-icon class="icon-size-6" [svgIcon]="'mat_outline:format_paint'"></mat-icon>
+                                <div class="font-bold text-lg pl-3 pt-2">Couleur dominante</div>
+                            </div>
+                            <div>
+                                <mat-slide-toggle class="pt-2 pl-4" [color]="'primary'"></mat-slide-toggle>
+                            </div>
+                        </div>
+                        <div class="flex flex-0 justify-center">
+                            <!-- <compact-picker></compact-picker> -->
+                            <!-- <compact-picker [control]="chromeControl"></compact-picker> -->
+                            <sketch-picker class="w-100" [control]="sketchControl" (colorChange)="setHex()"></sketch-picker>
+                            <!-- SelectedHEX: {{selectedHex}}  -->
+                        </div>
+                    </div>
+                    <!-- Orientation -->
+                    <div class="flex flex-col pt-6 px-6">
+                        <span class="pl-1 text-lg font-bold inline-flex">
+                            <mat-icon class="icon-size-6" [svgIcon]="'mat_outline:open_with'"></mat-icon>
+                            <span class="pl-2">Orientation</span>
+                        </span>
+                        <mat-form-field class="flex-auto fuse-mat-no-subscript fuse-mat-rounded pb-3 text-lg">
+                            <mat-select [placeholder]="'Trier par'">
+                                <mat-option value="select1-1">Tous</mat-option>
+                                <mat-option value="select1-2">OPTION 2</mat-option>
+                                <mat-option value="select1-3">OPTION 3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <!-- Personne -->
+                    <div class="flex flex-0 flex-row pt-4 justify-between px-6">
+                        <div class="flex items-center">
+                            <mat-icon class="icon-size-8" [svgIcon]="'mat_solid:groups'"></mat-icon>
+                            <div class="font-bold text-lg pl-3">Personne</div>
+                        </div>
+                        <div>
+                            <mat-slide-toggle class="pt-2 pl-4" [color]="'primary'"></mat-slide-toggle>
+                        </div>
+                    </div>
+                    <!-- Contenu centré -->
+                    <div class="flex flex-0 flex-row pt-4 justify-between px-6">
+                        <div class="flex items-center inline-flex">
+                            <mat-icon class="icon-size-6" [svgIcon]="'my_location'"></mat-icon>
+                            <div class="font-bold text-lg pl-3">Contenu centré</div>
+                        </div>
+                        <div>
+                            <mat-slide-toggle class="pt-2 pl-4" [color]="'primary'"></mat-slide-toggle>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <!-- Orientation -->
-            <div class="flex flex-col pt-6 px-6">
-                <span class="pl-1 text-xl font-bold inline-flex">
-                    <mat-icon class="icon-size-6" [svgIcon]="'mat_outline:open_with'"></mat-icon>
-                    <span class="pl-2">Orientation</span>
-                </span>
-                <mat-form-field class="flex-auto fuse-mat-no-subscript fuse-mat-rounded pb-3 text-xl">
-                    <mat-select [placeholder]="'Trier par'">
-                        <mat-option value="select1-1">Tous</mat-option>
-                        <mat-option value="select1-2">OPTION 2</mat-option>
-                        <mat-option value="select1-3">OPTION 3</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
-            <!-- Personne -->
-            <div class="flex flex-0 flex-row pt-4 justify-between px-6">
-                <div class="flex items-center">
-                    <mat-icon class="icon-size-8" [svgIcon]="'mat_solid:groups'"></mat-icon>
-                    <div class="font-bold text-xl pl-3">Personne</div>
-                </div>
-                <div>
-                    <mat-slide-toggle class="pt-2 pl-4" [color]="'primary'"></mat-slide-toggle>
-                </div>
-            </div>
-            <!-- Contenu centré -->
-            <div class="flex flex-0 flex-row pt-4 justify-between px-6">
-                <div class="flex items-center">
-                    <mat-icon class="icon-size-6" [svgIcon]="'my_location'"></mat-icon>
-                    <div class="font-bold text-xl pl-3 pt-2">Contenu centré</div>
-                </div>
-                <div>
-                    <mat-slide-toggle class="pt-2 pl-4" [color]="'primary'"></mat-slide-toggle>
-                </div>
-            </div>
-        </div>
+            </mat-drawer>
 
-        <div class="flex flex-auto col-span-9 flex-col w-full p-3 bg-card" fuseScrollbar [fuseScrollbarOptions]="{wheelPropagation: true, suppressScrollY: false}">
-            <!-- Disposition des images -->
-            <div class="grid sm:grid-cols-6 md:grid-cols-12 gap-3 w-full flex-row min-w-0">
-                <div *ngFor="let image of images" class="flex flex-auto md:col-span-3 h-full bg-card">
-                    <a
-                        class="flex flex-col shadow overflow-hidden bg-card-2 hover:shadow-xl transition-shadow duration-200 ease-in-out"
-                        target="_blank"
-                        rel="noreferrer">
-                        <img
-                            class="w-ful object-cover border-b"
-                            [src]="'assets/images/babashot/' + image.img">
-                    </a>
-                </div>
-            </div>
-        </div>
+            <!-- Drawer content -->
+            <mat-drawer-content class="flex flex-col flex-auto">
 
-    </div>
+
+                <!-- Photos -->
+                <div class="flex h-full">
+                    <div class="grid sm:grid-cols-6 md:grid-cols-12 gap-3 w-full flex-row min-w-0">
+                        <div *ngFor="let image of images" class="flex md:col-span-3 h-full bg-card">
+                            <img
+                                class="w-ful object-cover border-b"
+                                [src]="'assets/images/babashot/' + image.img">
+                        </div>
+                    </div>
+                </div>
+            </mat-drawer-content>
+
+        </mat-drawer-container>
+
+    </ng-container>
 
 </div>
