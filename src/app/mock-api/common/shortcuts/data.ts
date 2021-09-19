@@ -57,6 +57,30 @@ export const shortcuts = [
         useRouter  : true
     },
     {
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+        label      : 'Sell',
+        description: 'Sell your contents',
+        icon       : 'heroicons_outline:shopping-bag',
+        link       : '/home-phenix/sell-phenix',
+        useRouter  : true
+    },
+    {
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+        label      : 'Template Global',
+        description: 'Template phenix',
+        icon       : 'heroicons_outline:template',
+        link       : '/home-phenix/template-global-phenix',
+        useRouter  : true
+    },
+    {
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+        label      : 'Legal',
+        description: 'Legal phenix',
+        icon       : 'heroicons_outline:academic-cap',
+        link       : '/home-phenix/legal-phenix',
+        useRouter  : true
+    },
+    {
         id         : 'a1ae9163-e2cb-459b-9be9-a184694f548d',
         label      : 'Votre Commande',
         description: 'liste des elements commandés',
@@ -64,12 +88,4 @@ export const shortcuts = [
         link       : '/client/order',
         useRouter  : true
     },
-    // {
-    //     id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548z',
-    //     label      : 'Tableau de bord',
-    //     description: 'Statistiques Globales',
-    //     icon       : 'heroicons_outline:cog',
-    //     link       : '/dashboards/global',
-    //     useRouter  : true
-    // },
 ];

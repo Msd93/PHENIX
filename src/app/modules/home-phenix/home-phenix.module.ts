@@ -23,6 +23,8 @@ import { ContactPhenixComponent } from './contact-phenix/contact-phenix.componen
 import { SellPhenixComponent } from './sell-phenix/sell-phenix.component';
 import { InscriptionPhenixComponent } from './inscription-phenix/inscription-phenix.component';
 import { AboutPhenixComponent } from './about-phenix/about-phenix.component';
+import { TemplateGlobalePhenixComponent } from './template-globale-phenix/template-globale-phenix.component';
+import { LegalPhenixComponent } from './legal-phenix/legal-phenix.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { AboutPhenixComponent } from './about-phenix/about-phenix.component';
     ContactPhenixComponent,
     SellPhenixComponent,
     InscriptionPhenixComponent,
-    AboutPhenixComponent
+    AboutPhenixComponent,
+    TemplateGlobalePhenixComponent,
+    LegalPhenixComponent
   ],
   imports: [
     CommonModule,
