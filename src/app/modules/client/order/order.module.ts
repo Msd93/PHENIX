@@ -16,7 +16,7 @@ import { OrderDetailsComponent } from 'app/modules/client/order/details/details.
 import { OrderListComponent } from 'app/modules/client/order/list/list.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { orderRoutes } from './order.routing';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
     declarations: [
         OrderComponent,
@@ -36,7 +36,8 @@ import { orderRoutes } from './order.routing';
         MatTooltipModule,
         FuseFindByKeyPipeModule,
         SharedModule,
-        MatTabsModule
+        MatTabsModule,
+        ReactiveFormsModule
     ]
 })
 export class OrderModule

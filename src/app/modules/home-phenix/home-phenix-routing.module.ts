@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Route, RouterModule, Routes } from '@angular/router';
+import  { Route, RouterModule, Routes } from '@angular/router';
+import { AboutPhenixComponent } from './about-phenix/about-phenix.component';
 import { ContactPhenixComponent } from './contact-phenix/contact-phenix.component';
 import { HomePhenixComponent } from './home-phenix/home-phenix.component';
 import { InscriptionPhenixComponent } from './inscription-phenix/inscription-phenix.component';
@@ -26,6 +26,10 @@ export const HomePhenixRoutingModule: Route[]=[
     {
         path :'inscription-phenix',
         component: InscriptionPhenixComponent
-    }
+    },
+    {
+        path :'about-phenix',
+        component: AboutPhenixComponent
+    },
 
 ]

@@ -1,0 +1,64 @@
+<div class="flex flex-col flex-auto min-w-0">
+    <!-- Main -->
+    <div class="flex-auto border-t -mt-px sm:pt-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full min-w-0">
+            <!-- Github issues summary -->
+            <div class="sm:col-span-2 md:col-span-4 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 grid-flow-row gap-6 w-full mt-8 sm:mt-4">
+                    <!-- New vs. Closed -->
+                    <div class="flex flex-col flex-auto">
+                        <div class="flex flex-col flex-auto">
+                            <apx-chart [title]="chartOptions.title" [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis" [legend]="chartOptions.legend"></apx-chart>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-auto">
+                        <div class="flex flex-col flex-auto">
+                            <apx-chart [title]="chartOptions1.title" [series]="chartOptions1.series" [chart]="chartOptions1.chart" [xaxis]="chartOptions1.xaxis" [legend]="chartOptions1.legend"></apx-chart>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-auto">
+                        <div class="flex flex-col flex-auto">
+                            <apx-chart [title]="chartOptions2.title" [series]="chartOptions2.series" [chart]="chartOptions2.chart" [xaxis]="chartOptions2.xaxis" [legend]="chartOptions2.legend"></apx-chart>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-auto">
+                        <div class="flex flex-col flex-auto">
+                            <div style="display: block">
+                                <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- New vs. Closed -->
+                    <!-- <div class="flex flex-col flex-auto">
+                        <div class="font-medium text-secondary">Page View</div>
+                        <div class="flex flex-col flex-auto">
+                            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"></apx-chart>
+                        </div>
+                    </div> -->
+                    <!-- New vs. Closed -->
+                    <!-- <div class="flex flex-col flex-auto">
+                        <div class="font-medium text-secondary">Transaction View</div>
+                        <div class="flex flex-col flex-auto">
+                            <apx-chart class="flex-auto w-full h-80" [chart]="chartGithubIssues.chart" [colors]="chartGithubIssues.colors" [dataLabels]="chartGithubIssues.dataLabels" [grid]="chartGithubIssues.grid" [labels]="chartGithubIssues.labels" [legend]="chartGithubIssues.legend"
+                                [plotOptions]="chartGithubIssues.plotOptions" [series]="chartGithubIssues.series[githubIssuesWeekSelector.value]" [states]="chartGithubIssues.states" [stroke]="chartGithubIssues.stroke" [tooltip]="chartGithubIssues.tooltip"
+                                [xaxis]="chartGithubIssues.xaxis" [yaxis]="chartGithubIssues.yaxis" [legend]="legend"></apx-chart>
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-auto">
+                        <div class="font-medium text-secondary">Transaction View</div>
+                        <div class="flex flex-col flex-auto">
+                            <div id="pie">
+                                <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [legend]="legend"></apx-chart>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
