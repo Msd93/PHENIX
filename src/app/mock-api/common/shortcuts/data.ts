@@ -81,7 +81,7 @@ export const shortcuts = [
         useRouter  : true
     },
     {
-        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548d',
         label      : 'Legal',
         description: 'Legal phenix',
         icon       : 'heroicons_outline:academic-cap',
