@@ -1,23 +1,129 @@
-<div class="container mx-auto">
-    <div class="grid grid-flow-row grid-cols-1 grid-rows-2 gap-4">
-        <div class="flex">
-            <ngx-file-drop 
-            dropZoneClassName="border border-blue-400"
-            (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" 
-            contentClassName="space-x-3 p-5">
-                <ng-template  ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
-                Faire un glisser déposer pour ajouter vos fichiers ou  
-                <button type="button" class="bg-gray-200 p-2 rounded" (click)="openFileSelector()">Selection multiple</button>
-                </ng-template>
-            </ngx-file-drop>
-        </div>
+<div class="flex flex-col flex-auto w-full">
 
-        <div class="flex space-x-2 overflow-x-auto">
-            <div class="flex" *ngFor="let item of files; let i=index">
-                <div *ngIf="item.fileEntry.isFile">
-                    <strong>{{ item.relativePath }}</strong>
-                <img  [src]="readFile(item)" alt="{{item.relativePath}}" />
+    <div class="flex flex-wrap w-full max-w-screen-xl mx-auto p-6 md:p-8">
+
+        <!-- Title and action buttons -->
+        <div class="flex items-center justify-between w-full">
+            <div>
+                <h2 class="text-3xl font-semibold tracking-tight leading-8">Upload photo</h2>
+                <div class="font-medium tracking-tight text-secondary">Ajouter du contenu dans votre espace privé</div>
             </div>
+            <div class="flex items-center ml-6">
+                <button class="hidden sm:inline-flex" mat-stroked-button>
+                    <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:document-report'"></mat-icon>
+                    <span class="ml-2">Aide</span>
+                </button>
+                <button class="hidden sm:inline-flex ml-3" mat-stroked-button>
+                    <mat-icon class="icon-size-5" [svgIcon]="'mat_outline:cancel'"></mat-icon>
+                    <span class="ml-2">Annuler</span>
+                </button>
+                <button class="hidden sm:inline-flex ml-3" mat-flat-button [color]="'primary'">
+                    <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:save'"></mat-icon>
+                    <span class="ml-2">Valide</span>
+                </button>
+
+                <!-- Actions menu (visible on xs) -->
+                <div class="sm:hidden">
+                    <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
+                        <mat-icon [svgIcon]="'heroicons_outline:dots-vertical'"></mat-icon>
+                    </button>
+                    <mat-menu #actionsMenu="matMenu">
+                        <button mat-menu-item>Export</button>
+                        <button mat-menu-item>Reports</button>
+                        <button mat-menu-item>Settings</button>
+                    </mat-menu>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 w-full mt-8">
+            <div class="grid gap-8 sm:grid-flow-col xl:grid-flow-row overflow-hidden">
+                <!-- Upload mdeia -->
+                <div class="flex flex-col flex-auto p-6 items-center bg-card overflow-hidden">
+                    <div class="flex flex-row  mt-4 -mx-6">
+                        <ngx-file-drop dropZoneClassName="border border-blue-400" (onFileDrop)="dropped($event)"
+                            (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)"
+                            contentClassName="space-x-3 p-5">
+                            <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                                <div>
+                                    <span>Faire un glisser déposer pour ajouter vos fichiers ou </span>
+                                    <button type="button" class="bg-gray-200 p-2 rounded"
+                                        (click)="openFileSelector()">Selection multiple</button>
+                                </div>
+                                <div class="text-xs font-semibold">
+                                    Les images doivent être au format (.eps ou .jpg) et les vidéos au format (.mov ou .mp4)
+                                </div>
+                            </ng-template>
+                        </ngx-file-drop>
+                    </div>
+                </div>
+                <!-- Display media -->
+                <div class="flex flex-col p-6 pr-3 pb-3 bg-card h-4/5 overflow-auto">
+                    <!-- <div class="flex flex-col mt-4 -mx-6" *ngFor="let item of files; let i=index">
+                        <div class="h-10" *ngIf="item.fileEntry.isFile">
+                            <strong>{{ item.relativePath }}</strong>
+                            <img [src]="imagesUrl[i]" alt="{{item.relativePath}}" />
+                        </div>
+                        <div>
+                        </div>
+                    </div> -->
+                    <div class="grid sm:grid-cols-6 md:grid-cols-12 gap-3 w-full flex-row min-w-0"
+                        *ngIf="files && files.length != 0">
+                        <div *ngFor="let item of files; let i=index" class="flex flex-auto md:col-span-4 bg-card">
+                            <a class="flex flex-col bg-card hover:shadow-2xl transition-shadow duration-200 ease-in-out"
+                                target="_blank" rel="noreferrer">
+                                <img [src]="imagesUrl[i]" alt="{{item.relativePath}}" />
+                            </a>
+                        </div>
+                    </div>
+                    <div *ngIf="files && files.length === 0">
+                       <span>AUCUN MEDIA AJOUTE</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Account balance -->
+            <div class="flex flex-col p-6 bg-card overflow-hidden">
+                <div class="flex flex-col p-6 pb-4">
+                    <div class="flex justify-start">
+                        <div class="flex flex-col">
+                            <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Ajouter un tag à vos photos</div>
+                        </div>
+                        <!-- <div class="ml-2">
+                            <button class="h-6 min-h-6 px-2 rounded-full bg-hover" mat-button
+                                [matMenuTriggerFor]="accountBalanceMenu">
+                                <span class="font-medium text-sm text-secondary">12 months</span>
+                            </button>
+                            <mat-menu #accountBalanceMenu="matMenu">
+                                <button mat-menu-item>3 months</button>
+                                <button mat-menu-item>6 months</button>
+                                <button mat-menu-item>9 months</button>
+                                <button mat-menu-item>12 months</button>
+                            </mat-menu>
+                        </div> -->
+                    </div>
+                    <!-- <div class="flex items-start mt-6 mr-2">
+                        <div class="flex flex-col">
+                            <div class="font-semibold text-3xl md:text-5xl tracking-tighter">80%</div>
+                            <div class="font-medium text-sm text-secondary leading-none">Average Monthly Growth
+                            </div>
+                        </div>
+                        <div class="flex flex-col ml-8 md:ml-16">
+                            <div class="font-semibold text-3xl md:text-5xl tracking-tighter">AA</div>
+                            <div class="font-medium text-sm text-secondary leading-none">Average Monthly Income
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="flex flex-col flex-auto">
+                    <!-- <apx-chart
+            class="flex-auto w-full h-full"
+            [chart]="accountBalanceOptions.chart"
+            [colors]="accountBalanceOptions.colors"
+            [fill]="accountBalanceOptions.fill"
+            [series]="accountBalanceOptions.series"
+            [stroke]="accountBalanceOptions.stroke"
+            [tooltip]="accountBalanceOptions.tooltip"
+            [xaxis]="accountBalanceOptions.xaxis"></apx-chart> -->
+                </div>
             </div>
         </div>
     </div>
