@@ -10,13 +10,13 @@
         </div>
     </div>
      <!-- body page -->
-       <div class="flex flex-col sm:flex-row flex-0 sm:items-center mx-50 sm:justify-between p-4 sm:py-4 sm:px-4 px-4 md:px-2 border-b bg-card dark:bg-transparent">
-                <form class="flex flex-col mt-2 p-2 pb-4 bg-card w-full mx-20">
+       <div class="flex flex-col sm:flex-row flex-0 sm:items-center  sm:justify-between p-4 sm:py-4 sm:px-4 px-4 md:px-2 border-b bg-card dark:bg-transparent">
+                <form class="flex flex-col mt-2 p-2 pb-4 bg-card w-full mx-50">
                  
                         <div class="flex my-0 xs:flex-col">
                         <mat-form-field
                             [ngClass]="formFieldHelpers"
-                            class="flex-auto">
+                            class="flex-auto fuse-mat-dense">
                             <mat-label>First name</mat-label>
                             <input matInput>
                             <mat-icon
@@ -26,20 +26,30 @@
                         </mat-form-field>
                         <mat-form-field
                             [ngClass]="formFieldHelpers"
-                            class="flex-auto min-w-150 ml-8 xs:ml-0">
+                            class="flex-auto min-w-150 ml-8 xs:ml-0 fuse-mat-dense">
                             <mat-label>Last name</mat-label>
                             <input matInput>
+                            <mat-icon
+                            class="icon-size-5"
+                            matSuffix
+                            [svgIcon]="'heroicons_solid:user-circle'"></mat-icon>
+        
                         </mat-form-field>
                     </div>
                     <div class="flex flex-col gt-xs:flex-row my-0 "> 
             
                         <mat-form-field
                         [ngClass]="formFieldHelpers"
-                        class="flex-auto gt-md:pr-3">
+                        class="flex-auto gt-md:pr-3 fuse-mat-dense">
                         <mat-label>Email</mat-label>
                         <input matInput>
+                        <mat-icon
+                        class="icon-size-5"
+                        matSuffix
+                        [svgIcon]="'heroicons_solid:mail'"></mat-icon>
                     </mat-form-field>
-                        <mat-form-field
+                    <mat-label>Message</mat-label>
+                        <!-- <mat-form-field
                             [ngClass]="formFieldHelpers"
                             class="fuse-mat-textarea flex-auto">
                             <mat-label>Message</mat-label>
@@ -47,11 +57,12 @@
                                 matInput
                                 [rows]="7"
                                 matTextareaAutosize></textarea>
-                        </mat-form-field>
+                        </mat-form-field> -->
+                        <quill-editor class="mt-2" [modules]="quillModules"></quill-editor>
                     </div>
                     <!-- <button envoyer-->          
                     <button
-                    class="mr-90 ml-90 font-bold "
+                    class="mr-90 ml-90 font-bold my-4"
                     mat-flat-button
                     [color]="'primary'">
                     <span class="ml-2 mr-1">

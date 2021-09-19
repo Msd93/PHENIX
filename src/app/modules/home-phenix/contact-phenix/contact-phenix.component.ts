@@ -17,6 +17,15 @@ export class ContactPhenixComponent implements OnInit {
   // faqCategory: FaqCategory;
   private _unsubscribeAll: Subject<any> = new Subject();
   formFieldHelpers: string[] = [''];
+
+  quillModules: any = {
+    toolbar: [
+        ['bold', 'italic', 'underline'],
+        [{align: []}, {list: 'ordered'}, {list: 'bullet'}],
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['clean']
+    ]
+};
   /**
    * Constructor
    */
