@@ -57,4 +57,12 @@ export const shortcuts = [
         link       : '/home-phenix/contact-phenix',
         useRouter  : true
     },
+    {
+        id         : 'a1ae91d3-e2cb-459b-9be9-a184694f548b',
+        label      : 'Sell',
+        description: 'Sell your contents',
+        icon       : 'heroicons_outline:search',
+        link       : '/home-phenix/sell-phenix',
+        useRouter  : true
+    },
 ];
