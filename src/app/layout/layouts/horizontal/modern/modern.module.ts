@@ -15,6 +15,7 @@ import { ShortcutsModule } from 'app/layout/common/shortcuts/shortcuts.module';
 import { UserModule } from 'app/layout/common/user/user.module';
 import { SharedModule } from 'app/shared/shared.module';
 import { ModernLayoutComponent } from 'app/layout/layouts/horizontal/modern/modern.component';
+import { BoxModule } from 'app/layout/common/box/box.module';
 
 @NgModule({
     declarations: [
@@ -35,6 +36,7 @@ import { ModernLayoutComponent } from 'app/layout/layouts/horizontal/modern/mode
         SearchModule,
         ShortcutsModule,
         UserModule,
+        BoxModule,
         SharedModule
     ],
     exports     : [
